@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net8.0</TargetFramework></PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../../manifest.json" LogicalName="Switcher.manifest.json" />
+    <EmbeddedResource Include="../../profiles/*.json" LogicalName="Switcher.profiles.%(Filename).json" />
+  </ItemGroup>
+</Project>
+

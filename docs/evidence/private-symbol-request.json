@@ -1,0 +1,21 @@
+{
+  "dateUtc": "2026-10-13T05:00:15.510Z",
+  "observedModule": "C:\\Windows\\System32\\twinui.pcshell.dll",
+  "resolved": false,
+  "request": {
+    "schemaVersion": 1,
+    "module": {
+      "imageName": "twinui.pcshell.dll",
+      "architecture": "windows-x86_64",
+      "sha256": "8ba440eded430a2417692a98b34695a12ad0ee000333dfed07e0c2723e17111c",
+      "peTimestamp": 3162946381,
+      "pdbGuid": "9507f3dad47f5f026569fc50273c40d7",
+      "pdbAge": 1,
+      "pdbName": "twinui.pcshell.pdb"
+    },
+    "symbols": [
+      "public: virtual long __cdecl XamlAltTabViewHost::Show(struct IImmersiveMonitor *,enum ALT_TAB_VIEW_FLAGS,struct IApplicationView *)"
+    ],
+    "timeoutMs": 1500
+  }
+}

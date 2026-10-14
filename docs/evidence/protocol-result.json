@@ -1,0 +1,22 @@
+{
+  "dateUtc": "2026-10-14T19:21:43.963Z",
+  "executable": "companion.exe",
+  "taskViewCapability": {
+    "kind": "window-switcher.capability",
+    "capability": "native-task-view-styling",
+    "available": false,
+    "reason": "private-shell-symbols-unavailable",
+    "contract": "private-shell-symbols.v1"
+  },
+  "results": [
+    "init/progress/ready-v5",
+    "Task View capability remains unavailable",
+    "invalid settings rejected without replacing snapshot",
+    "dedicated keyboard hook installed on Windows",
+    "disable releases hook/poll/session/thumbnails",
+    "reactivation accepts a new profile and restarts resources",
+    "graceful shutdown",
+    "stdin EOF stops companion",
+    "invalid init emits protocol error and exits"
+  ]
+}

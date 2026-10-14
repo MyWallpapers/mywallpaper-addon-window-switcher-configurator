@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "cinema",
+  "name": "Cinéma",
+  "layout": "grid",
+  "material": "gradient",
+  "surfaceColor": "#101011FF",
+  "gradientEnd": "#272017FF",
+  "gradientAngle": 90,
+  "surfaceOpacity": 100,
+  "cardColor": "#25221CFF",
+  "selectedColor": "#453820FF",
+  "hoverColor": "#393022FF",
+  "textColor": "#FFF9EAFF",
+  "mutedColor": "#D0BE96FF",
+  "accentColor": "#F4CF7BFF",
+  "panelBorderColor": "#806E49FF"
+}

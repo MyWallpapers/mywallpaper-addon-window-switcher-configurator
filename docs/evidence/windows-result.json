@@ -1,0 +1,162 @@
+{
+  "dateUtc": "2026-10-13T05:12:39.5890619Z",
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "architecture": "X64",
+  "source": "Real HWND fixtures on the Windows host; no Explorer injection, no Task View modification.",
+  "monitors": [
+    {
+      "Handle": 65537,
+      "Index": 1,
+      "Bounds": {
+        "X": 0,
+        "Y": 0,
+        "Width": 2560,
+        "Height": 1440,
+        "Right": 2560,
+        "Bottom": 1440
+      },
+      "Work": {
+        "X": 0,
+        "Y": 0,
+        "Width": 2560,
+        "Height": 1440,
+        "Right": 2560,
+        "Bottom": 1440
+      },
+      "Primary": true
+    }
+  ],
+  "results": [
+    {
+      "profile": "boreal",
+      "layout": "grid",
+      "thumbnails": 3,
+      "glass": true,
+      "dpi": [
+        96,
+        96
+      ],
+      "capture": "profile-boreal.png",
+      "width": 928,
+      "height": 469
+    },
+    {
+      "profile": "midnight",
+      "layout": "grid",
+      "thumbnails": 3,
+      "glass": false,
+      "dpi": [
+        96,
+        96
+      ],
+      "capture": "profile-midnight.png",
+      "width": 928,
+      "height": 469
+    },
+    {
+      "profile": "rose",
+      "layout": "grid",
+      "thumbnails": 3,
+      "glass": false,
+      "dpi": [
+        96,
+        96
+      ],
+      "capture": "profile-rose.png",
+      "width": 928,
+      "height": 469
+    },
+    {
+      "profile": "paper",
+      "layout": "list",
+      "thumbnails": 3,
+      "glass": false,
+      "dpi": [
+        96,
+        96
+      ],
+      "capture": "profile-paper.png",
+      "width": 1920,
+      "height": 530
+    },
+    {
+      "profile": "cinema",
+      "layout": "grid",
+      "thumbnails": 3,
+      "glass": false,
+      "dpi": [
+        96,
+        96
+      ],
+      "capture": "profile-cinema.png",
+      "width": 928,
+      "height": 469
+    },
+    {
+      "profile": "classic",
+      "layout": "classic",
+      "thumbnails": 0,
+      "glass": false,
+      "dpi": [
+        96,
+        96
+      ],
+      "capture": "profile-classic.png",
+      "width": 928,
+      "height": 334
+    },
+    {
+      "profile": "flip",
+      "layout": "flip",
+      "thumbnails": 1,
+      "glass": false,
+      "dpi": [
+        96,
+        96
+      ],
+      "capture": "profile-flip.png",
+      "width": 606,
+      "height": 671
+    },
+    {
+      "layout": "grid",
+      "thumbnails": 3,
+      "cards": 3
+    },
+    {
+      "layout": "list",
+      "thumbnails": 3,
+      "cards": 3
+    },
+    {
+      "layout": "classic",
+      "thumbnails": 0,
+      "cards": 3
+    },
+    {
+      "layout": "flip",
+      "thumbnails": 1,
+      "cards": 3
+    },
+    {
+      "layout": "desktop",
+      "thumbnails": 1,
+      "cards": 3
+    },
+    {
+      "test": "syscommand-close-and-reopen",
+      "closeClean": true,
+      "reopened": true
+    },
+    {
+      "test": "minimized-placeholder",
+      "minimized": true,
+      "liveThumbnails": 0
+    },
+    {
+      "test": "normal-close-owned-fixture",
+      "closed": true
+    }
+  ],
+  "remainingThumbnails": 0
+}

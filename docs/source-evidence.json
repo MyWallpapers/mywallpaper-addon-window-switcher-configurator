@@ -1,0 +1,256 @@
+{
+  "dateUtc": "2026-10-13T05:26:04.560Z",
+  "myWallpaperHead": "299548ebcc20770fd73b10bdffd5f05586fbe126",
+  "ledgerSha256": "640be5b1751a9c2308c45e460d8d10f9f2612751ce86d4bfbdd29c36cdc44e65",
+  "decisionReferences": [
+    "DEC-0012",
+    "DEC-0013",
+    "DEC-0098",
+    "DEC-0099",
+    "DEC-0157",
+    "DEC-0160"
+  ],
+  "upstreamCommit": "8d60b4c4113a7f0a18b4b48a5443a199acf54805",
+  "family": "A09",
+  "mods": [
+    {
+      "id": "aero-flip3d-recreation",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/aero-flip3d-recreation.wh.cpp",
+      "catalogueSha256": "96416390c18dd3ae66d13192b97e7824f2d696bac516d8aa795a31ef5091d86c",
+      "settings": [
+        "usePerspective",
+        "autoCycle",
+        "visibleWindowCount"
+      ],
+      "licenseEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier"
+    },
+    {
+      "id": "alt-tab-delayer",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/alt-tab-delayer.wh.cpp",
+      "catalogueSha256": "bb822e3c22235aaf6eae4f761b67c8524f8aa12c88abb41a0c0753dbe48e6a61",
+      "settings": [
+        "delay"
+      ],
+      "licenseEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier",
+      "examinedSha256": "9e6d4353eadbf7d584756df5d537dcf9c3fa149726e147b8f45eca1e9dc330d1",
+      "catalogueEncodingSha256": "bb822e3c22235aaf6eae4f761b67c8524f8aa12c88abb41a0c0753dbe48e6a61",
+      "encoding": "Raw GitHub UTF-8/LF; catalogue hashed CRLF checkout bytes.",
+      "declaredLicense": null,
+      "copiedCode": false
+    },
+    {
+      "id": "alt-tab-flip-3d",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/alt-tab-flip-3d.wh.cpp",
+      "catalogueSha256": "04a675f6751686060da0e1fb248fbed1417e54b030cf0beb0c672bd9c7e087a3",
+      "settings": [
+        "style",
+        "monitor",
+        "shortcut",
+        "winTabStyle",
+        "stickyShortcut",
+        "animationDuration",
+        "flipSpeed",
+        "showDelay",
+        "tiltAngle",
+        "stackSpacing",
+        "windowSize",
+        "depth",
+        "maxWindows",
+        "background",
+        "blurAmount",
+        "dimOpacity",
+        "showTitle",
+        "titlePosition",
+        "shadows",
+        "includeMinimized",
+        "minimizedContent",
+        "liveContent",
+        "frameRate",
+        "middleClickClose",
+        "closeButton",
+        "hideBars",
+        "excludedApps"
+      ],
+      "licenseEvidence": "Licence déclarée : MIT",
+      "examinedSha256": "7a7aa53a4299df71179a89d6b5a14f2189bc0dc33999180d279a197e1d132b52",
+      "catalogueEncodingSha256": "04a675f6751686060da0e1fb248fbed1417e54b030cf0beb0c672bd9c7e087a3",
+      "encoding": "Raw GitHub UTF-8/LF; catalogue hashed CRLF checkout bytes.",
+      "declaredLicense": "MIT",
+      "copiedCode": false
+    },
+    {
+      "id": "alt-tab-hide-ghost-windows",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/alt-tab-hide-ghost-windows.wh.cpp",
+      "catalogueSha256": "d9611b815c1b1905155fa0b5fb78ad937f130bd21d35aef43119156bd1e1ee8f",
+      "settings": [
+        "MinWidth",
+        "MinHeight",
+        "FilterMode",
+        "HideInactiveGroupyTabs",
+        "HideMinimizedWindows"
+      ],
+      "licenseEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier",
+      "examinedSha256": "7cb06a4e1abf53c041179a160c9fc250ba73bd394babe2b1da64eb4339febd2a",
+      "catalogueEncodingSha256": "d9611b815c1b1905155fa0b5fb78ad937f130bd21d35aef43119156bd1e1ee8f",
+      "encoding": "Raw GitHub UTF-8/LF; catalogue hashed CRLF checkout bytes.",
+      "declaredLicense": null,
+      "copiedCode": false
+    },
+    {
+      "id": "alt-tab-per-monitor",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/alt-tab-per-monitor.wh.cpp",
+      "catalogueSha256": "155b569275df24049189b52362b929657bb684d0c33eb9bb0d91ed414c624de6",
+      "settings": [
+        "altTabLocation",
+        "altTabWindows",
+        "winAltTabLocation",
+        "winAltTabWindows"
+      ],
+      "licenseEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier",
+      "examinedSha256": "b86156f4ba102acbd2b7cdb1f49a6363e65a88968e1b7c145c3601f875960526",
+      "catalogueEncodingSha256": "155b569275df24049189b52362b929657bb684d0c33eb9bb0d91ed414c624de6",
+      "encoding": "Raw GitHub UTF-8/LF; catalogue hashed CRLF checkout bytes.",
+      "declaredLicense": null,
+      "copiedCode": false
+    },
+    {
+      "id": "chrome-pip-alt-tab-window-hider",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/chrome-pip-alt-tab-window-hider.wh.cpp",
+      "catalogueSha256": "447603d9088b2465d9daf627d65262439dbc2c3ac292a0679366f31a92f3a0db",
+      "settings": [],
+      "licenseEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier"
+    },
+    {
+      "id": "classic-window-switcher",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/classic-window-switcher.wh.cpp",
+      "catalogueSha256": "69d325430141a55e127bfb0b10bf3d46b88291658e9605eca783a2f8eb3f2738",
+      "settings": [
+        "CoolSwitchColumns",
+        "CoolSwitchRows",
+        "ShowDelay",
+        "IncludeWallpaper",
+        "PrimaryMonitorOnly",
+        "PerMonitor",
+        "PerApplicationList",
+        "SwitcherIsPerApplication",
+        "AlwaysUseWindowTitleAndIcon",
+        "ScrollWheelBehavior",
+        "ScrollWheelInvert",
+        "SkipIfOneWindow",
+        "RegisterHotKey"
+      ],
+      "licenseEvidence": "GPL signalé dans le préambule",
+      "examinedSha256": "e54105ac1233add9099d12d4f4b0323c076aebf48781f31b77d1d72df2c890eb",
+      "catalogueEncodingSha256": "69d325430141a55e127bfb0b10bf3d46b88291658e9605eca783a2f8eb3f2738",
+      "encoding": "Raw GitHub UTF-8/LF; catalogue hashed CRLF checkout bytes.",
+      "declaredLicense": "gpl-2.0",
+      "copiedCode": false
+    },
+    {
+      "id": "desktop-window-cards",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/desktop-window-cards.wh.cpp",
+      "catalogueSha256": "ac082dd403d23ab02ec5dc8b029f556618012d6afec99787ad2cc856d57449c6",
+      "settings": [
+        "LayoutMode",
+        "GridMaxWidth",
+        "ScalePercent",
+        "MaxWidth",
+        "Brightness",
+        "AnimationMs",
+        "CloseAction",
+        "IncludeExisting",
+        "NativeAnimationMode",
+        "HoverZoom",
+        "DragOpenDelayMs",
+        "RememberPosition",
+        "SmoothReveal",
+        "RevealDelayMs",
+        "RevealFadeMs"
+      ],
+      "licenseEvidence": "GPL signalé dans le préambule",
+      "examinedSha256": "e55954b5cb4507d8ff8f4a0b4a672311b4f9f90274155fdbc83aea929a03ecc5",
+      "catalogueEncodingSha256": "ac082dd403d23ab02ec5dc8b029f556618012d6afec99787ad2cc856d57449c6",
+      "encoding": "Raw GitHub UTF-8/LF; catalogue hashed CRLF checkout bytes.",
+      "declaredLicense": "GPL-3.0-only",
+      "copiedCode": false
+    },
+    {
+      "id": "edge-window-tab-manager-block",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/edge-window-tab-manager-block.wh.cpp",
+      "catalogueSha256": "1bd1b788086cff5fd62b6cdd1e4805c03c56b6430b799bbcfd60b167329a31eb",
+      "settings": [],
+      "licenseEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier"
+    },
+    {
+      "id": "legacy-alt-tab",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/legacy-alt-tab.wh.cpp",
+      "catalogueSha256": "69a4b824eefc5d15e81dfd63f050addc1d53ba0b466dfc943ead1651f8d7e62b",
+      "settings": [],
+      "licenseEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier"
+    },
+    {
+      "id": "overhaulded-alt-tab",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/overhaulded-alt-tab.wh.cpp",
+      "catalogueSha256": "7966b498ae6d7d272d9a93560bde72301fc1de00b67037178273b555bc1a5369",
+      "settings": [
+        "Appearance",
+        "Background",
+        "Dwm",
+        "ExperimentalSettings"
+      ],
+      "licenseEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier"
+    },
+    {
+      "id": "simple-window-switcher",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/simple-window-switcher.wh.cpp",
+      "catalogueSha256": "76ef5d38a6b38462a682d70efab8950b6cf07cb822e28f56b97d6b1234d2ae88",
+      "settings": [
+        "Style",
+        "Appearance",
+        "Dimensions",
+        "Grouping",
+        "Accessibility",
+        "ExcludedWindows",
+        "customHeader"
+      ],
+      "licenseEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier",
+      "examinedSha256": "d85ada118c35dbcee2db8a3b8a379df1b854180d04fa9c16551e780528bb2eb7",
+      "catalogueEncodingSha256": "76ef5d38a6b38462a682d70efab8950b6cf07cb822e28f56b97d6b1234d2ae88",
+      "encoding": "Raw GitHub UTF-8/LF; catalogue hashed CRLF checkout bytes.",
+      "declaredLicense": null,
+      "copiedCode": false
+    },
+    {
+      "id": "win7-alttab-loader",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/win7-alttab-loader.wh.cpp",
+      "catalogueSha256": "fb27f3782bea71b82df1872f2fea00268a854bc39e5afa4061fade0b826aabe2",
+      "settings": [],
+      "licenseEvidence": "Pas de licence explicite dans les métadonnées ; défaut MIT annoncé par le README du dépôt, dépendances à vérifier"
+    },
+    {
+      "id": "windows-10-alt-tab-restorer",
+      "source": "https://github.com/ramensoftware/windhawk-mods/blob/8d60b4c4113a7f0a18b4b48a5443a199acf54805/mods/windows-10-alt-tab-restorer.wh.cpp",
+      "catalogueSha256": "89c53997746df3789a7eb1230b15b7abf1220a61612bbcfa34f095a9329dc2ab",
+      "settings": [
+        "allowCallSiteFallback",
+        "resetCrashGuard"
+      ],
+      "licenseEvidence": "GPL signalé dans le préambule"
+    }
+  ],
+  "taskbarReference": {
+    "head": "8e1fe2e6ddfa1acd51f9eb626f4f0dab09c21dc0",
+    "definitions": 91,
+    "files": {
+      "README.md": "24db61b4f634a3ca9870035f4e6441405a3d86a1292ee0d2c86d5d0d20567c48",
+      "manifest.json": "ef76e6055ba00e4a76704a46490191e8f97d0aa3613d8a0f0a5abfa11b31bb0d",
+      "src/config.cpp": "c939433a85158096653031411659f59563d39276d03b552c1133975c285f9fb2",
+      "src/taskbar_configurator.cpp": "de374d0fae18afe0bc41d39694bf4c9c0a02aefb53775e5c77a5f768765df4a9"
+    }
+  },
+  "engineReference": {
+    "head": "ff32c520dd4ccd9073c9dc001a180e886d50ab63",
+    "sdkSha256": "61b4d9f44cdafceb235d42374cf6e0a5ee9d0583ebc5f6c2763f8fed1018f2a5"
+  },
+  "interpretation": "Implementation evidence only. No shared repository edits, no launch ratification, no third-party mod code incorporated."
+}

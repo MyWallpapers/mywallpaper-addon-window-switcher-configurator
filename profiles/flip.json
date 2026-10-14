@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "flip",
+  "name": "Cascade Flip",
+  "layout": "flip",
+  "material": "gradient",
+  "surfaceColor": "#141C33FF",
+  "gradientEnd": "#2B254AFF",
+  "gradientAngle": 145,
+  "surfaceOpacity": 100,
+  "cardColor": "#263252FF",
+  "selectedColor": "#3B4B79FF",
+  "hoverColor": "#3A3F65FF",
+  "textColor": "#F5F0FFFF",
+  "mutedColor": "#CCC5E9FF",
+  "accentColor": "#C3B2FFFF",
+  "panelBorderColor": "#7C73ADFF"
+}

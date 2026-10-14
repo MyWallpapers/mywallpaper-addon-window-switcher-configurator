@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "rose",
+  "name": "Rose électrique",
+  "layout": "grid",
+  "material": "gradient",
+  "surfaceColor": "#36172DFF",
+  "gradientEnd": "#591F41FF",
+  "gradientAngle": 35,
+  "surfaceOpacity": 100,
+  "cardColor": "#54243FFF",
+  "selectedColor": "#7C335BFF",
+  "hoverColor": "#69304FFF",
+  "textColor": "#FFF4FAFF",
+  "mutedColor": "#F3BCD5FF",
+  "accentColor": "#FFB8DDFF",
+  "panelBorderColor": "#AD547FFF"
+}

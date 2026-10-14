@@ -1,0 +1,119 @@
+{
+  "dateUtc": "2026-10-14T19:26:41.349Z",
+  "target": "windows-x86_64",
+  "executable": "native/out/windows-x86_64/companion.exe",
+  "executableSha256": "3b7854eace6abf6a1db6d0f12605833025a38ce6d2323fc683b19cb06fdca355",
+  "assemblySha256": "bc51d9bb56e76daf807c33af73ebc644411f13ffd0a86c0674653ad6f7bb8e72",
+  "runtimeFiles": 468,
+  "unpackedBytes": 168003733,
+  "publicSdkMaximumFiles": 8192,
+  "publicSdkMaximumBytes": 536870912,
+  "settings": 92,
+  "presets": 7,
+  "sourceHashes": {
+    "manifest.json": "3cbb60ffbe56390f26cb9a6edcf7017c8662c0c45fe3ad8dcb67b108b09ede4e",
+    "mywallpaper.config.json": "c212f680146fdcc01a8bde481f09bb1d2024e255b1ae86daf17f3b3ded328b05",
+    "global.json": "62f62942d78471a62e573b248d8c60c3ffbb31e451f06206b76f27a286f6fbeb",
+    "Directory.Build.props": "08990f41ce942fbc9bdf17c9fc286bfc50f6c36f343f0c8e27a3401502d7cffe",
+    "native/build.ps1": "9730f51871d8bcdcde6a50d5d3e5dfb8e279ad0a77e445dcef3e4b48c6344377",
+    "src/Switcher.Core/Layout.cs": "1ef009e18f1a37b8a613faf4dcc14a5bd7fdaef2b5c4e30c7243b8603dfc67d4",
+    "src/Switcher.Core/Settings.cs": "24abe8e9f75d02a273ec1fde6b786c6d6c9fac94ad56a8441e272c9d0760ae8b",
+    "src/Switcher.Core/Switcher.Core.csproj": "2cd15138964fd8c382fa4344b66c2fbbfe0c6db8899bc84cea2dd0996f434765",
+    "src/Switcher.Core/WindowModel.cs": "3410e466b22f8795a851b82d61286ea6779d0c94d38a14dff52a237745d0546f",
+    "src/Switcher.Core/Wire.cs": "5d7c810e97fe39dc32b2b1fd4c63e7c6157ca101549af27283e7761b2e0b6105",
+    "src/Switcher.Windows/app.manifest": "1e1b6635c683781c798568b27c8e55f04f59ce4b4f00181ff790d88b46187a48",
+    "src/Switcher.Windows/KeyboardRouter.cs": "2bf971952f008f9d3eb1d27442d5f3e7a410a4738919a6d63e5796ed320f9d53",
+    "src/Switcher.Windows/Native.cs": "99f087a098d1fe261e930445d14ec2c824f6f6c532dcb36737df562cf463c19a",
+    "src/Switcher.Windows/Program.cs": "7c4f61c21f570a529239bac4262b2f4a377f50840e8cadf2a24f4052a01f7d3a",
+    "src/Switcher.Windows/ProtocolHost.cs": "c8e0fc6136a66d1e116c2707c9220b0f07196cae77bf4f46e60f0ce26b548430",
+    "src/Switcher.Windows/Qualification.cs": "f0e50dbd83c238d326e3225388144eb9b08253934b79abb37cdb3459156f6353",
+    "src/Switcher.Windows/Switcher.Windows.csproj": "2d0e5cba8822c25aa0a1a9f2080d25a3ccefa7af1f30ce519bd1444cd35eeb2a",
+    "src/Switcher.Windows/SwitcherController.cs": "298f333aaab074fb908c8dd9f420ca2c24d1e0c720e4a5966eac571305ae0be0",
+    "src/Switcher.Windows/SwitcherWindow.cs": "ebad121ae7a13015cb96e515c2fb4b2819a3e275e550fd86d0886c46c256090c",
+    "src/Switcher.Windows/Thumbnail.cs": "7f0666d612d91e0113a7158949cf7be6cae45ee3558860f706c14a6d7cb5cc76",
+    "src/Switcher.Windows/TrayLifetime.cs": "913130bbfa83f6ca04263e75fa1a700a0c3ac3f3aac68a2feb6297a288a3baa9",
+    "src/Switcher.Windows/WindowCatalog.cs": "ecc5033ee8011fb58dd0867eb2ce7f83767237f303f3d2e740e3ca502ceaf31b",
+    "profiles/boreal.json": "427dd2de5b049ba94b6dacc439b7134f01a207f02a498d37fbe90c65e206e392",
+    "profiles/cinema.json": "d2a9ff1eeedb8615544934ff77581c0fb88da5b52459c5687f4f7e5de13523e6",
+    "profiles/classic.json": "05696ea5316461ce7ce26eedc3f1b9fc321ad0e8b7d6687282316f2cc2b38ce9",
+    "profiles/flip.json": "b04906b7b553c414d9457e17703bbf5b91d99e99b1f93b9ccf7a93de57aa2aa2",
+    "profiles/midnight.json": "708c01a66945949af0f48f894c5b9c3cdcbe84e56a685dfbaf8784816151a1f9",
+    "profiles/paper.json": "4a2e22932403308a45b077b05bafe57bc7c69054cc6a58eee190ebc64fa38e17",
+    "profiles/rose.json": "e1311e4247351c35b098c2f40823880b6e1204ffbd1daf7b0b933ecddba4fcc4"
+  },
+  "captures": [
+    {
+      "file": "docs/evidence/layout-classic.png",
+      "sha256": "38bbc18cd97312132a09e6cacfcb55264edce5faafb63043372f606710c26170",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/layout-desktop.png",
+      "sha256": "1f297138397b2ccadf3de7e0fde0ba4acacba97026bcf1582f6072e3069aa714",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/layout-flip.png",
+      "sha256": "3aefd4c42fc496120ea6be8eb919936ffe3703da417d823cae37cd8cdf994230",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/layout-grid.png",
+      "sha256": "8ca0a588324eda8dbd59391f841a503ccd9f001f834f6ceb8369752879b8d835",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/layout-list.png",
+      "sha256": "e983131acbcb8ceded9ec23552bda2fa740e995447a119093397ef3a63cf99d4",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/profile-boreal.png",
+      "sha256": "253baaf61d451726b8e0a3a0fffb4c72fc3c5e26467bd0178357d0f119baa578",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/profile-cinema.png",
+      "sha256": "b1f53843702262c841732bbda6e045187a2ecc08c0eacccdfd8b9aad1bf12a72",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/profile-classic.png",
+      "sha256": "77a3ae415e17d943868de3eef587a56e69f294be0cea4a0e88487f322d47a7a3",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/profile-flip.png",
+      "sha256": "005115c91319bbfdce2f20c34b7ff888b294cae19eb70f81dcf4ba5b667af3ad",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/profile-midnight.png",
+      "sha256": "7e7236cd1719346e14fbbfb3d0fc145699b244d64b4922fe4acc0194fcbcf8fa",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/profile-paper.png",
+      "sha256": "eeb4b8b8a2513e7bc85e2ed4e47afebd9724040d65eb317465b2b7a272deeba9",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    },
+    {
+      "file": "docs/evidence/profile-rose.png",
+      "sha256": "bfc101cd22ddb7626f5dcf7061027fbcc0d572f88e20fe633338d5d3a8b4e0dc",
+      "origin": "Captured from the actual Windows companion HWND with dedicated owned fixture windows; not an ImageGen mockup.",
+      "runtimeAsset": false
+    }
+  ],
+  "publication": "Local unsigned bundle only. No publication or launch decision."
+}

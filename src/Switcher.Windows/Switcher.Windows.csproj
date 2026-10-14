@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>companion</AssemblyName>
+    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>Switcher.Windows.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../Switcher.Core/Switcher.Core.csproj" /></ItemGroup>
+</Project>
+

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "paper",
+  "name": "Papier",
+  "layout": "list",
+  "material": "solid",
+  "surfaceColor": "#F7F3E9FF",
+  "gradientEnd": "#EFE8D9FF",
+  "surfaceOpacity": 100,
+  "cardColor": "#EEE6D6FF",
+  "selectedColor": "#DFD3BAFF",
+  "hoverColor": "#E7DCC7FF",
+  "textColor": "#27251FFF",
+  "mutedColor": "#615847FF",
+  "accentColor": "#735529FF",
+  "panelBorderColor": "#C1AD89FF"
+}

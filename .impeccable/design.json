@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T05:22:08Z",
+  "title": "Design System: Sélecteur de fenêtres MyWallpaper",
+  "extensions": {
+    "colorMeta": {
+      "accent-boreal": {
+        "role": "primary",
+        "displayName": "Verre boréal — Accent",
+        "canonical": "#71F5DBFF"
+      },
+      "selected-boreal": {
+        "role": "secondary",
+        "displayName": "Verre boréal — Sélection",
+        "canonical": "#215B66FF"
+      },
+      "hover-boreal": {
+        "role": "secondary",
+        "displayName": "Verre boréal — Survol",
+        "canonical": "#24505CFF"
+      },
+      "surface-boreal": {
+        "role": "neutral",
+        "displayName": "Verre boréal — Surface",
+        "canonical": "#102A36FF"
+      },
+      "gradient-end-boreal": {
+        "role": "neutral",
+        "displayName": "Verre boréal — Fin de dégradé",
+        "canonical": "#153E48FF"
+      },
+      "card-boreal": {
+        "role": "neutral",
+        "displayName": "Verre boréal — Carte",
+        "canonical": "#173846FF"
+      },
+      "text-boreal": {
+        "role": "neutral",
+        "displayName": "Verre boréal — Texte",
+        "canonical": "#F0FFFFFF"
+      },
+      "muted-boreal": {
+        "role": "neutral",
+        "displayName": "Verre boréal — Texte secondaire",
+        "canonical": "#BCDAE0FF"
+      },
+      "border-boreal": {
+        "role": "neutral",
+        "displayName": "Verre boréal — Contour",
+        "canonical": "#66D9DB80"
+      },
+      "accent-cinema": {
+        "role": "primary",
+        "displayName": "Cinéma — Accent",
+        "canonical": "#F4CF7BFF"
+      },
+      "selected-cinema": {
+        "role": "secondary",
+        "displayName": "Cinéma — Sélection",
+        "canonical": "#453820FF"
+      },
+      "hover-cinema": {
+        "role": "secondary",
+        "displayName": "Cinéma — Survol",
+        "canonical": "#393022FF"
+      },
+      "surface-cinema": {
+        "role": "neutral",
+        "displayName": "Cinéma — Surface",
+        "canonical": "#101011FF"
+      },
+      "gradient-end-cinema": {
+        "role": "neutral",
+        "displayName": "Cinéma — Fin de dégradé",
+        "canonical": "#272017FF"
+      },
+      "card-cinema": {
+        "role": "neutral",
+        "displayName": "Cinéma — Carte",
+        "canonical": "#25221CFF"
+      },
+      "text-cinema": {
+        "role": "neutral",
+        "displayName": "Cinéma — Texte",
+        "canonical": "#FFF9EAFF"
+      },
+      "muted-cinema": {
+        "role": "neutral",
+        "displayName": "Cinéma — Texte secondaire",
+        "canonical": "#D0BE96FF"
+      },
+      "border-cinema": {
+        "role": "neutral",
+        "displayName": "Cinéma — Contour",
+        "canonical": "#806E49FF"
+      },
+      "accent-classic": {
+        "role": "primary",
+        "displayName": "Classique — Accent",
+        "canonical": "#A5D6FFFF"
+      },
+      "selected-classic": {
+        "role": "secondary",
+        "displayName": "Classique — Sélection",
+        "canonical": "#1F4E7CFF"
+      },
+      "hover-classic": {
+        "role": "secondary",
+        "displayName": "Classique — Survol",
+        "canonical": "#424242FF"
+      },
+      "surface-classic": {
+        "role": "neutral",
+        "displayName": "Classique — Surface",
+        "canonical": "#232323FF"
+      },
+      "gradient-end-classic": {
+        "role": "neutral",
+        "displayName": "Classique — Fin de dégradé",
+        "canonical": "#232323FF"
+      },
+      "card-classic": {
+        "role": "neutral",
+        "displayName": "Classique — Carte",
+        "canonical": "#303030FF"
+      },
+      "text-classic": {
+        "role": "neutral",
+        "displayName": "Classique — Texte",
+        "canonical": "#FFFFFFFF"
+      },
+      "muted-classic": {
+        "role": "neutral",
+        "displayName": "Classique — Texte secondaire",
+        "canonical": "#D2D2D2FF"
+      },
+      "border-classic": {
+        "role": "neutral",
+        "displayName": "Classique — Contour",
+        "canonical": "#696969FF"
+      },
+      "accent-flip": {
+        "role": "primary",
+        "displayName": "Cascade Flip — Accent",
+        "canonical": "#C3B2FFFF"
+      },
+      "selected-flip": {
+        "role": "secondary",
+        "displayName": "Cascade Flip — Sélection",
+        "canonical": "#3B4B79FF"
+      },
+      "hover-flip": {
+        "role": "secondary",
+        "displayName": "Cascade Flip — Survol",
+        "canonical": "#3A3F65FF"
+      },
+      "surface-flip": {
+        "role": "neutral",
+        "displayName": "Cascade Flip — Surface",
+        "canonical": "#141C33FF"
+      },
+      "gradient-end-flip": {
+        "role": "neutral",
+        "displayName": "Cascade Flip — Fin de dégradé",
+        "canonical": "#2B254AFF"
+      },
+      "card-flip": {
+        "role": "neutral",
+        "displayName": "Cascade Flip — Carte",
+        "canonical": "#263252FF"
+      },
+      "text-flip": {
+        "role": "neutral",
+        "displayName": "Cascade Flip — Texte",
+        "canonical": "#F5F0FFFF"
+      },
+      "muted-flip": {
+        "role": "neutral",
+        "displayName": "Cascade Flip — Texte secondaire",
+        "canonical": "#CCC5E9FF"
+      },
+      "border-flip": {
+        "role": "neutral",
+        "displayName": "Cascade Flip — Contour",
+        "canonical": "#7C73ADFF"
+      },
+      "accent-midnight": {
+        "role": "primary",
+        "displayName": "Minuit — Accent",
+        "canonical": "#9EC5FFFF"
+      },
+      "selected-midnight": {
+        "role": "secondary",
+        "displayName": "Minuit — Sélection",
+        "canonical": "#284569FF"
+      },
+      "hover-midnight": {
+        "role": "secondary",
+        "displayName": "Minuit — Survol",
+        "canonical": "#273954FF"
+      },
+      "surface-midnight": {
+        "role": "neutral",
+        "displayName": "Minuit — Surface",
+        "canonical": "#101826FF"
+      },
+      "gradient-end-midnight": {
+        "role": "neutral",
+        "displayName": "Minuit — Fin de dégradé",
+        "canonical": "#152439FF"
+      },
+      "card-midnight": {
+        "role": "neutral",
+        "displayName": "Minuit — Carte",
+        "canonical": "#1B293FFF"
+      },
+      "text-midnight": {
+        "role": "neutral",
+        "displayName": "Minuit — Texte",
+        "canonical": "#F4F7FFFF"
+      },
+      "muted-midnight": {
+        "role": "neutral",
+        "displayName": "Minuit — Texte secondaire",
+        "canonical": "#BBC9E2FF"
+      },
+      "border-midnight": {
+        "role": "neutral",
+        "displayName": "Minuit — Contour",
+        "canonical": "#456088FF"
+      },
+      "accent-paper": {
+        "role": "primary",
+        "displayName": "Papier — Accent",
+        "canonical": "#735529FF"
+      },
+      "selected-paper": {
+        "role": "secondary",
+        "displayName": "Papier — Sélection",
+        "canonical": "#DFD3BAFF"
+      },
+      "hover-paper": {
+        "role": "secondary",
+        "displayName": "Papier — Survol",
+        "canonical": "#E7DCC7FF"
+      },
+      "surface-paper": {
+        "role": "neutral",
+        "displayName": "Papier — Surface",
+        "canonical": "#F7F3E9FF"
+      },
+      "gradient-end-paper": {
+        "role": "neutral",
+        "displayName": "Papier — Fin de dégradé",
+        "canonical": "#EFE8D9FF"
+      },
+      "card-paper": {
+        "role": "neutral",
+        "displayName": "Papier — Carte",
+        "canonical": "#EEE6D6FF"
+      },
+      "text-paper": {
+        "role": "neutral",
+        "displayName": "Papier — Texte",
+        "canonical": "#27251FFF"
+      },
+      "muted-paper": {
+        "role": "neutral",
+        "displayName": "Papier — Texte secondaire",
+        "canonical": "#615847FF"
+      },
+      "border-paper": {
+        "role": "neutral",
+        "displayName": "Papier — Contour",
+        "canonical": "#C1AD89FF"
+      },
+      "accent-rose": {
+        "role": "primary",
+        "displayName": "Rose électrique — Accent",
+        "canonical": "#FFB8DDFF"
+      },
+      "selected-rose": {
+        "role": "secondary",
+        "displayName": "Rose électrique — Sélection",
+        "canonical": "#7C335BFF"
+      },
+      "hover-rose": {
+        "role": "secondary",
+        "displayName": "Rose électrique — Survol",
+        "canonical": "#69304FFF"
+      },
+      "surface-rose": {
+        "role": "neutral",
+        "displayName": "Rose électrique — Surface",
+        "canonical": "#36172DFF"
+      },
+      "gradient-end-rose": {
+        "role": "neutral",
+        "displayName": "Rose électrique — Fin de dégradé",
+        "canonical": "#591F41FF"
+      },
+      "card-rose": {
+        "role": "neutral",
+        "displayName": "Rose électrique — Carte",
+        "canonical": "#54243FFF"
+      },
+      "text-rose": {
+        "role": "neutral",
+        "displayName": "Rose électrique — Texte",
+        "canonical": "#FFF4FAFF"
+      },
+      "muted-rose": {
+        "role": "neutral",
+        "displayName": "Rose électrique — Texte secondaire",
+        "canonical": "#F3BCD5FF"
+      },
+      "border-rose": {
+        "role": "neutral",
+        "displayName": "Rose électrique — Contour",
+        "canonical": "#AD547FFF"
+      }
+    },
+    "typographyMeta": {
+      "heading": {
+        "displayName": "En-tête",
+        "purpose": "Heading fixed at 24 WPF DIP."
+      },
+      "window-title": {
+        "displayName": "Titre de fenêtre",
+        "purpose": "Default 15 WPF DIP, adjustable in the manifest."
+      },
+      "supporting": {
+        "displayName": "Informations secondaires",
+        "purpose": "Default 12 WPF DIP, adjustable in the manifest."
+      },
+      "fallback-label": {
+        "displayName": "Libellé de secours",
+        "purpose": "Preview status label at 11 WPF DIP."
+      }
+    },
+    "shadows": [
+      {
+        "name": "separate-window-shadow",
+        "value": "Separate non-interactive WPF window; black; opacity 35%; blur 36 DIP; distance 12 DIP; direction 270 degrees.",
+        "purpose": "Soft outer shadow around the companion. Hidden when opacity is zero."
+      }
+    ],
+    "overlays": [
+      {
+        "name": "monitor-dimmer",
+        "value": "Black overlay at 30% opacity over the selected monitor bounds by default.",
+        "purpose": "Temporarily lowers desktop contrast behind the companion; hidden at zero."
+      }
+    ],
+    "motion": [
+      {
+        "name": "panel-open",
+        "value": "Modes none, fade, slide, and spring; default slide. All animated entry modes fade opacity 0.35 to 1 over 190 ms by default; slide adds vertical translation 16 to 0 DIP with ExponentialEase exponent 5, while spring uses BackEase amplitude 0.3. Fade has no translation. none or zero duration skips entry.",
+        "purpose": "Entry motion for the companion surface."
+      },
+      {
+        "name": "selection-feedback",
+        "value": "On selection change, heading opacity 0.75 to 1 over 120 ms; ExponentialEase exponent 4, EaseOut.",
+        "purpose": "Selection changes immediately; the heading receives the visible pulse."
+      },
+      {
+        "name": "card-hover",
+        "value": "Scale 1 to 1.03 and translate up 3 DIP over 120 ms; ExponentialEase exponent 4, EaseOut.",
+        "purpose": "Hover response when motion is enabled."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "Enabled by the explicit reduceMotion setting or, when followWindowsMotion is on, by the Windows system animation setting.",
+        "purpose": "Suppresses entry, hover, and selection animations."
+      }
+    ],
+    "nativePlatform": {
+      "platform": "Windows x64, native WPF",
+      "settingsSurface": "hostMyWallpaper",
+      "componentSnippets": "Omitted because this implementation has native WPF components and no HTML/CSS source.",
+      "scope": "Local A09 implementation snapshot; not a product, architecture, launch, or compatibility decision."
+    }
+  },
+  "components": [],
+  "narrative": {
+    "northStar": "Choix immédiat, surface lisible",
+    "overview": "Cette fiche consigne le rendu réellement présent dans le prototype local A09. Elle décrit le companion Windows x64 natif WPF et les valeurs visuelles du manifeste et des profils ; elle ne crée aucune décision produit, architecture, lancement ou compatibilité. Le manifeste sélectionne Verre boréal comme défaut de cette réalisation locale, conformément à la recommandation déléguée.\n\nLes réglages restent dans l'expérience habituelle de hostMyWallpaper, avec les sections, sélecteurs, plages et interrupteurs définis par le manifeste. Le companion séparé présente un titre et le nombre de fenêtres, une recherche facultative, des cartes lisibles, des aperçus DWM et des indications clavier. Son interface est WPF native, sans HTML/CSS. Les tokens décrivent le rendu du companion, pas une nouvelle marque durable.",
+    "keyCharacteristics": [
+      "Le manifeste choisit Verre boréal, grille et matière vitrée comme valeurs initiales.",
+      "Sept profils coordonnent surfaces, cartes, sélection, survol, texte, accent et contour.",
+      "Le companion utilise les primitives WPF et DWM sur Windows x64.",
+      "La cascade Flip expose une profondeur 2D avec un aperçu DWM vivant sur la carte avant."
+    ],
+    "rules": [
+      {
+        "name": "The Readable Selection Rule",
+        "body": "Keep the first view centered on the window title and count, optional search, readable cards, and keyboard hints; the settings remain in the hostMyWallpaper settings experience.",
+        "section": "Overview"
+      },
+      {
+        "name": "The Profile Palette Rule",
+        "body": "Use one active profile as a coordinated surface, card, selected, hover, text, muted, accent, and border set. Read the canonical manifest and profile values as #RRGGBBAA, with alpha last.",
+        "section": "Colors"
+      },
+      {
+        "name": "The Native Type Ramp Rule",
+        "body": "Use the 24/15/12 WPF DIP hierarchy by default with Segoe UI Variable; the smaller 11 DIP fallback label is for preview status only. Keep the manifest's font alternatives and size ranges user-controlled.",
+        "section": "Typography"
+      },
+      {
+        "name": "The Work-Area Rule",
+        "body": "Fit the grid and page count to the selected monitor's available work area, using the configured width and height as layout bounds.",
+        "section": "Layout"
+      },
+      {
+        "name": "The Glass Fallback Rule",
+        "body": "Request the Windows DWM glass backdrop for the glass material and switch to an opaque surface-color backing when DWM declines it.",
+        "section": "Elevation & Depth"
+      },
+      {
+        "name": "The Shared Radius Rule",
+        "body": "Keep the implemented silhouette at 22 DIP for the panel, 14 DIP for cards, and 6 DIP for preview frames; round the native window region with the panel.",
+        "section": "Shapes"
+      },
+      {
+        "name": "The Selection Contrast Rule",
+        "body": "Make selection legible with selectedColor, an accentColor border at the configured 3 DIP default, and full opacity against the 90% default opacity of inactive cards.",
+        "section": "Components"
+      },
+      {
+        "name": "The DWM Preview Truth Rule",
+        "body": "Show live DWM thumbnails only where the layout grants a preview; retain fallback labels for unavailable or minimized previews, and keep the cascade's live thumbnail on the front card.",
+        "section": "Components"
+      }
+    ],
+    "dos": [
+      "Do derive companion colors from the active manifest profile and keep the alpha byte last in #RRGGBBAA values.",
+      "Do keep the MyWallpaper settings flow in hostMyWallpaper and use its existing native grouped controls.",
+      "Do retain opaque material fallback, preview fallbacks, and reduced-motion handling where the current implementation provides them.",
+      "Do treat the selected profile and tokens as a snapshot of this local realization, with the ledger remaining the only decision authority."
+    ],
+    "donts": [
+      "Don't create an HTML/CSS version of the WPF companion or move host settings into a second settings surface.",
+      "Don't describe the Flip cascade as a real 3D projection or as native Windows Task View."
+    ]
+  }
+}

@@ -1,0 +1,519 @@
+{
+  "note": "Scoped reference evidence, not a runtime-effect certificate.",
+  "definitions": 92,
+  "values": [
+    {
+      "id": "enabled",
+      "consumers": [
+        "src/Switcher.Windows/KeyboardRouter.cs",
+        "src/Switcher.Windows/Qualification.cs",
+        "src/Switcher.Windows/SwitcherController.cs"
+      ]
+    },
+    {
+      "id": "profile",
+      "consumers": [
+        "src/Switcher.Windows/Qualification.cs",
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "layout",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs",
+        "src/Switcher.Windows/Qualification.cs",
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "activationMode",
+      "consumers": [
+        "src/Switcher.Windows/KeyboardRouter.cs"
+      ]
+    },
+    {
+      "id": "shortcut",
+      "consumers": [
+        "src/Switcher.Windows/KeyboardRouter.cs"
+      ]
+    },
+    {
+      "id": "openDelayMs",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherController.cs"
+      ]
+    },
+    {
+      "id": "fullscreenBypass",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherController.cs"
+      ]
+    },
+    {
+      "id": "placement",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "panelWidthPct",
+      "consumers": [
+        "src/Switcher.Windows/Qualification.cs",
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "panelHeightPct",
+      "consumers": [
+        "src/Switcher.Windows/Qualification.cs",
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "columns",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs"
+      ]
+    },
+    {
+      "id": "cardWidth",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs"
+      ]
+    },
+    {
+      "id": "previewAspect",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs"
+      ]
+    },
+    {
+      "id": "density",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs"
+      ]
+    },
+    {
+      "id": "gap",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs"
+      ]
+    },
+    {
+      "id": "padding",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "cardRadius",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "pageSize",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs"
+      ]
+    },
+    {
+      "id": "sort",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs"
+      ]
+    },
+    {
+      "id": "listPreview",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs"
+      ]
+    },
+    {
+      "id": "groupApplications",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs"
+      ]
+    },
+    {
+      "id": "windowScreen",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs",
+        "src/Switcher.Windows/SwitcherController.cs",
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "minimized",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs"
+      ]
+    },
+    {
+      "id": "includeApplications",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs"
+      ]
+    },
+    {
+      "id": "excludeApplications",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs"
+      ]
+    },
+    {
+      "id": "hideGhosts",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs"
+      ]
+    },
+    {
+      "id": "minWindowSize",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs"
+      ]
+    },
+    {
+      "id": "hideUntitled",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs"
+      ]
+    },
+    {
+      "id": "hideHung",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs"
+      ]
+    },
+    {
+      "id": "material",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "surfaceColor",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "gradientEnd",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "gradientAngle",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "surfaceOpacity",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "desktopDim",
+      "consumers": [
+        "src/Switcher.Windows/Qualification.cs",
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "panelRadius",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "panelBorderWidth",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "panelBorderColor",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "shadowOpacity",
+      "consumers": [
+        "src/Switcher.Windows/Qualification.cs",
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "shadowBlur",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "shadowDistance",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "cardColor",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "selectedColor",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "hoverColor",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "textColor",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "mutedColor",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "accentColor",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "previewOpacity",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "previewFit",
+      "consumers": [
+        "src/Switcher.Windows/Thumbnail.cs"
+      ]
+    },
+    {
+      "id": "previewClientOnly",
+      "consumers": [
+        "src/Switcher.Windows/Thumbnail.cs"
+      ]
+    },
+    {
+      "id": "showIcon",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "showTitle",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "showApplication",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "showScreen",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "showMinimizedBadge",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "cardBorderWidth",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "selectionBorderWidth",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "inactiveOpacity",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "fontFamily",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "titleFontSize",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs",
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "appFontSize",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs",
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "titleWeight",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "wrapNavigation",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherController.cs"
+      ]
+    },
+    {
+      "id": "hoverSelect",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "mouseWheel",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "showClose",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "closeConfirm",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherController.cs"
+      ]
+    },
+    {
+      "id": "searchEnabled",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "dismissOutside",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "dismissOnFocusLoss",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "showHints",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "animationMode",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "animationDurationMs",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "selectionDurationMs",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "hoverScale",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "hoverLift",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "flipDepth",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs"
+      ]
+    },
+    {
+      "id": "flipVisible",
+      "consumers": [
+        "src/Switcher.Core/Layout.cs"
+      ]
+    },
+    {
+      "id": "reduceMotion",
+      "consumers": [
+        "src/Switcher.Windows/Qualification.cs",
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "followWindowsMotion",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "previewBudget",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherWindow.cs"
+      ]
+    },
+    {
+      "id": "refreshMs",
+      "consumers": [
+        "src/Switcher.Windows/SwitcherController.cs"
+      ]
+    },
+    {
+      "id": "maxCandidates",
+      "consumers": [
+        "src/Switcher.Core/WindowModel.cs",
+        "src/Switcher.Windows/SwitcherController.cs"
+      ]
+    }
+  ]
+}

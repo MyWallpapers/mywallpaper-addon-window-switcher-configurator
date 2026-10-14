@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "midnight",
+  "name": "Minuit",
+  "layout": "grid",
+  "material": "solid",
+  "surfaceColor": "#101826FF",
+  "gradientEnd": "#152439FF",
+  "surfaceOpacity": 100,
+  "cardColor": "#1B293FFF",
+  "selectedColor": "#284569FF",
+  "hoverColor": "#273954FF",
+  "textColor": "#F4F7FFFF",
+  "mutedColor": "#BBC9E2FF",
+  "accentColor": "#9EC5FFFF",
+  "panelBorderColor": "#456088FF"
+}

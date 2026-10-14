@@ -1,0 +1,39 @@
+{
+  "family": "A09",
+  "physicalShortcutConfirmedByUser": true,
+  "passed": true,
+  "cycles": [
+    {
+      "index": 1,
+      "nativeProjectionAccepted": true
+    },
+    {
+      "index": 2,
+      "nativeProjectionAccepted": true
+    },
+    {
+      "index": 3,
+      "nativeProjectionAccepted": true
+    },
+    {
+      "index": 4,
+      "nativeProjectionAccepted": true
+    },
+    {
+      "index": 5,
+      "nativeProjectionAccepted": true
+    }
+  ],
+  "memoryScope": "60-second idle sample; not a long-term leak qualification",
+  "companionTerminated": true,
+  "memory": {
+    "samples": 13,
+    "durationSeconds": 60,
+    "privateFirst": 223072256,
+    "privateLast": 223072256,
+    "privateMaximum": 223072256,
+    "handleFirst": 1537,
+    "handleLast": 1537,
+    "cpuSecondsDelta": 0.015625
+  }
+}

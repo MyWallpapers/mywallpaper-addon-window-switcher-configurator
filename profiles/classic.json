@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "classic",
+  "name": "Classique",
+  "layout": "classic",
+  "material": "solid",
+  "surfaceColor": "#232323FF",
+  "gradientEnd": "#232323FF",
+  "surfaceOpacity": 100,
+  "cardColor": "#303030FF",
+  "selectedColor": "#1F4E7CFF",
+  "hoverColor": "#424242FF",
+  "textColor": "#FFFFFFFF",
+  "mutedColor": "#D2D2D2FF",
+  "accentColor": "#A5D6FFFF",
+  "panelBorderColor": "#696969FF"
+}

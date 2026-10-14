@@ -1,0 +1,1807 @@
+{
+  "runtime": "native-v1",
+  "name": "Sélecteur de fenêtres",
+  "description": "Un sélecteur personnalisable : grille, liste, classique, cascade et carte du bureau, avec aperçus DWM, profils et navigation clavier.",
+  "version": "0.1.0",
+  "deviceSettingsVersion": "1",
+  "settings": [
+    {
+      "id": "startSection",
+      "type": "section",
+      "label": "Votre sélecteur",
+      "defaultCollapsed": false,
+      "description": "Choisissez un profil, puis une présentation. Les réglages s’appliquent à cet appareil."
+    },
+    {
+      "id": "enabled",
+      "type": "boolean",
+      "label": "Activer le sélecteur",
+      "parent": "startSection",
+      "default": true,
+      "scope": "device",
+      "description": "À l’arrêt, le raccourci et tous les aperçus sont libérés."
+    },
+    {
+      "id": "profile",
+      "type": "select",
+      "label": "Ambiance visuelle",
+      "parent": "startSection",
+      "default": "boreal",
+      "scope": "device",
+      "options": [
+        {
+          "value": "boreal",
+          "label": "Verre boréal"
+        },
+        {
+          "value": "midnight",
+          "label": "Minuit"
+        },
+        {
+          "value": "rose",
+          "label": "Rose électrique"
+        },
+        {
+          "value": "paper",
+          "label": "Papier"
+        },
+        {
+          "value": "cinema",
+          "label": "Cinéma"
+        },
+        {
+          "value": "classic",
+          "label": "Classique"
+        },
+        {
+          "value": "flip",
+          "label": "Cascade Flip"
+        },
+        {
+          "value": "custom",
+          "label": "Personnalisée"
+        }
+      ],
+      "description": "Les profils fixent la palette et la matière. Personnalisée dévoile les couleurs ; les choix personnels sont conservés quand vous changez de profil."
+    },
+    {
+      "id": "layout",
+      "type": "select",
+      "label": "Présentation",
+      "parent": "startSection",
+      "default": "profile",
+      "scope": "device",
+      "options": [
+        {
+          "value": "profile",
+          "label": "Conseillée par le profil"
+        },
+        {
+          "value": "grid",
+          "label": "Grille d’aperçus"
+        },
+        {
+          "value": "list",
+          "label": "Liste détaillée"
+        },
+        {
+          "value": "classic",
+          "label": "Classique compact"
+        },
+        {
+          "value": "flip",
+          "label": "Cascade inspirée de Flip 3D"
+        },
+        {
+          "value": "desktop",
+          "label": "Carte des fenêtres du bureau"
+        }
+      ],
+      "description": "La carte reprend la position des fenêtres sur l’écran choisi. La cascade propose un effet de profondeur sans restaurer le composant Vista."
+    },
+    {
+      "id": "activationMode",
+      "type": "select",
+      "label": "Ouvrir le sélecteur",
+      "parent": "startSection",
+      "default": "shortcut",
+      "scope": "device",
+      "options": [
+        {
+          "value": "shortcut",
+          "label": "Raccourci dédié"
+        },
+        {
+          "value": "altTab",
+          "label": "Alt + Tab et raccourci dédié"
+        }
+      ],
+      "description": "Le raccourci dédié laisse le sélecteur ouvert. Avec Alt + Tab, relâchez Alt pour choisir. Win + Tab conserve Task View de Windows."
+    },
+    {
+      "id": "shortcut",
+      "type": "select",
+      "label": "Raccourci dédié",
+      "parent": "startSection",
+      "default": "ctrlAltSpace",
+      "scope": "device",
+      "options": [
+        {
+          "value": "ctrlAltSpace",
+          "label": "Ctrl + Alt + Espace"
+        },
+        {
+          "value": "ctrlShiftSpace",
+          "label": "Ctrl + Maj + Espace"
+        },
+        {
+          "value": "altBacktick",
+          "label": "Alt + touche `"
+        }
+      ],
+      "description": "Appuyez de nouveau pour annuler. Le raccourci est actif uniquement pendant l’exécution de cet add-on."
+    },
+    {
+      "id": "openDelayMs",
+      "type": "range",
+      "label": "Délai d’apparition (ms)",
+      "parent": "startSection",
+      "default": 120,
+      "scope": "device",
+      "min": 0,
+      "max": 600,
+      "step": 10,
+      "description": "Un Alt + Tab très bref change de fenêtre sans faire apparaître le panneau."
+    },
+    {
+      "id": "fullscreenBypass",
+      "type": "boolean",
+      "label": "Garder Alt + Tab Windows en plein écran",
+      "parent": "startSection",
+      "default": true,
+      "scope": "device",
+      "description": "Évite d’intercepter Alt + Tab quand la fenêtre active couvre tout son écran."
+    },
+    {
+      "id": "layoutSection",
+      "type": "section",
+      "label": "Disposition et densité",
+      "defaultCollapsed": false
+    },
+    {
+      "id": "placement",
+      "type": "select",
+      "label": "Écran d’affichage",
+      "parent": "layoutSection",
+      "default": "cursor",
+      "scope": "device",
+      "options": [
+        {
+          "value": "cursor",
+          "label": "Sous le pointeur"
+        },
+        {
+          "value": "focused",
+          "label": "Fenêtre active"
+        },
+        {
+          "value": "primary",
+          "label": "Écran principal"
+        }
+      ]
+    },
+    {
+      "id": "panelWidthPct",
+      "type": "range",
+      "label": "Largeur maximale (% de l’écran)",
+      "parent": "layoutSection",
+      "default": 80,
+      "scope": "device",
+      "min": 40,
+      "max": 96,
+      "step": 1
+    },
+    {
+      "id": "panelHeightPct",
+      "type": "range",
+      "label": "Hauteur maximale (% de l’écran)",
+      "parent": "layoutSection",
+      "default": 80,
+      "scope": "device",
+      "min": 35,
+      "max": 94,
+      "step": 1
+    },
+    {
+      "id": "columns",
+      "type": "range",
+      "label": "Colonnes (0 = automatique)",
+      "parent": "layoutSection",
+      "default": 0,
+      "scope": "device",
+      "min": 0,
+      "max": 8,
+      "step": 1
+    },
+    {
+      "id": "cardWidth",
+      "type": "range",
+      "label": "Largeur souhaitée des cartes (px)",
+      "parent": "layoutSection",
+      "default": 280,
+      "scope": "device",
+      "min": 120,
+      "max": 480,
+      "step": 10
+    },
+    {
+      "id": "previewAspect",
+      "type": "select",
+      "label": "Format des cartes",
+      "parent": "layoutSection",
+      "default": "wide",
+      "scope": "device",
+      "options": [
+        {
+          "value": "wide",
+          "label": "Paysage 16:10"
+        },
+        {
+          "value": "square",
+          "label": "Carré"
+        },
+        {
+          "value": "natural",
+          "label": "Format de la fenêtre sélectionnée"
+        }
+      ]
+    },
+    {
+      "id": "density",
+      "type": "select",
+      "label": "Densité",
+      "parent": "layoutSection",
+      "default": "balanced",
+      "scope": "device",
+      "options": [
+        {
+          "value": "airy",
+          "label": "Aérée"
+        },
+        {
+          "value": "balanced",
+          "label": "Équilibrée"
+        },
+        {
+          "value": "compact",
+          "label": "Compacte"
+        }
+      ]
+    },
+    {
+      "id": "gap",
+      "type": "range",
+      "label": "Espacement des cartes (px)",
+      "parent": "layoutSection",
+      "default": 16,
+      "scope": "device",
+      "min": 4,
+      "max": 40,
+      "step": 1
+    },
+    {
+      "id": "padding",
+      "type": "range",
+      "label": "Marge intérieure (px)",
+      "parent": "layoutSection",
+      "default": 28,
+      "scope": "device",
+      "min": 12,
+      "max": 52,
+      "step": 1
+    },
+    {
+      "id": "cardRadius",
+      "type": "range",
+      "label": "Coins des cartes (px)",
+      "parent": "layoutSection",
+      "default": 14,
+      "scope": "device",
+      "min": 0,
+      "max": 32,
+      "step": 1
+    },
+    {
+      "id": "pageSize",
+      "type": "range",
+      "label": "Cartes par page au maximum",
+      "parent": "layoutSection",
+      "default": 24,
+      "scope": "device",
+      "min": 4,
+      "max": 48,
+      "step": 1
+    },
+    {
+      "id": "sort",
+      "type": "select",
+      "label": "Ordre des fenêtres",
+      "parent": "layoutSection",
+      "default": "recent",
+      "scope": "device",
+      "options": [
+        {
+          "value": "recent",
+          "label": "Dernières utilisées"
+        },
+        {
+          "value": "title",
+          "label": "Titre"
+        },
+        {
+          "value": "application",
+          "label": "Application"
+        }
+      ]
+    },
+    {
+      "id": "listPreview",
+      "type": "boolean",
+      "label": "Aperçus dans la liste",
+      "parent": "layoutSection",
+      "default": true,
+      "scope": "device",
+      "description": "Sans aperçu, davantage de fenêtres tiennent dans la liste."
+    },
+    {
+      "id": "groupApplications",
+      "type": "boolean",
+      "label": "Rassembler les fenêtres de la même application",
+      "parent": "layoutSection",
+      "default": false,
+      "scope": "device",
+      "description": "Les fenêtres restent sélectionnables séparément."
+    },
+    {
+      "id": "filterSection",
+      "type": "section",
+      "label": "Fenêtres proposées",
+      "defaultCollapsed": false
+    },
+    {
+      "id": "windowScreen",
+      "type": "select",
+      "label": "Fenêtres de quels écrans ?",
+      "parent": "filterSection",
+      "default": "all",
+      "scope": "device",
+      "options": [
+        {
+          "value": "all",
+          "label": "Tous les écrans"
+        },
+        {
+          "value": "cursor",
+          "label": "Écran du pointeur"
+        },
+        {
+          "value": "focused",
+          "label": "Écran de la fenêtre active"
+        }
+      ]
+    },
+    {
+      "id": "minimized",
+      "type": "select",
+      "label": "Fenêtres réduites",
+      "parent": "filterSection",
+      "default": "include",
+      "scope": "device",
+      "options": [
+        {
+          "value": "include",
+          "label": "Inclure"
+        },
+        {
+          "value": "exclude",
+          "label": "Masquer"
+        },
+        {
+          "value": "only",
+          "label": "Seulement les fenêtres réduites"
+        }
+      ]
+    },
+    {
+      "id": "includeApplications",
+      "type": "textarea",
+      "label": "Montrer uniquement ces applications",
+      "parent": "filterSection",
+      "default": "",
+      "scope": "device",
+      "description": "Facultatif : noms des exécutables, un par ligne, par exemple notepad.exe. Laissez vide pour toutes les applications.",
+      "placeholder": "notepad.exe\nexplorer.exe"
+    },
+    {
+      "id": "excludeApplications",
+      "type": "textarea",
+      "label": "Applications à masquer",
+      "parent": "filterSection",
+      "default": "",
+      "scope": "device",
+      "description": "Facultatif : noms des exécutables, un par ligne. Aucun code ni sélecteur nécessaire.",
+      "placeholder": "exemple.exe"
+    },
+    {
+      "id": "hideGhosts",
+      "type": "boolean",
+      "label": "Masquer les fenêtres fantômes",
+      "parent": "filterSection",
+      "default": true,
+      "scope": "device",
+      "description": "Écarte les fenêtres nommées Ghost et les fenêtres minuscules qui ne peuvent pas servir d’aperçu."
+    },
+    {
+      "id": "minWindowSize",
+      "type": "range",
+      "label": "Seuil des fenêtres minuscules (px)",
+      "parent": "filterSection",
+      "default": 48,
+      "scope": "device",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "description": "Masque les fenêtres dont les deux dimensions sont inférieures à ce seuil.",
+      "showIf": {
+        "setting": "hideGhosts",
+        "equals": true
+      }
+    },
+    {
+      "id": "hideUntitled",
+      "type": "boolean",
+      "label": "Masquer les fenêtres sans titre",
+      "parent": "filterSection",
+      "default": true,
+      "scope": "device",
+      "description": "Les fenêtres sans titre sont souvent des utilitaires invisibles."
+    },
+    {
+      "id": "hideHung",
+      "type": "boolean",
+      "label": "Masquer les applications qui ne répondent pas",
+      "parent": "filterSection",
+      "default": false,
+      "scope": "device",
+      "description": "Ce filtre ne ferme pas et ne force pas l’arrêt de l’application."
+    },
+    {
+      "id": "materialSection",
+      "type": "section",
+      "label": "Fond et lumière",
+      "defaultCollapsed": false,
+      "description": "Choisissez l’ambiance Personnalisée pour éditer la palette. Les fonds verre utilisent la matière Windows quand elle est disponible, sinon un fond uni lisible."
+    },
+    {
+      "id": "material",
+      "type": "select",
+      "label": "Fond",
+      "parent": "materialSection",
+      "default": "glass",
+      "scope": "device",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Uni"
+        },
+        {
+          "value": "gradient",
+          "label": "Dégradé"
+        },
+        {
+          "value": "glass",
+          "label": "Verre Windows"
+        }
+      ],
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "surfaceColor",
+      "type": "color",
+      "label": "Couleur de départ",
+      "parent": "materialSection",
+      "default": "#102A36FF",
+      "scope": "device",
+      "alpha": true,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "gradientEnd",
+      "type": "color",
+      "label": "Couleur d’arrivée",
+      "parent": "materialSection",
+      "default": "#153E48FF",
+      "scope": "device",
+      "alpha": true,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "gradientAngle",
+      "type": "range",
+      "label": "Direction du dégradé (degrés)",
+      "parent": "materialSection",
+      "default": 30,
+      "scope": "device",
+      "min": 0,
+      "max": 360,
+      "step": 5,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "surfaceOpacity",
+      "type": "range",
+      "label": "Opacité du fond (%)",
+      "parent": "materialSection",
+      "default": 86,
+      "scope": "device",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "desktopDim",
+      "type": "range",
+      "label": "Assombrir le bureau (%)",
+      "parent": "materialSection",
+      "default": 30,
+      "scope": "device",
+      "min": 0,
+      "max": 75,
+      "step": 1
+    },
+    {
+      "id": "panelRadius",
+      "type": "range",
+      "label": "Coins du panneau (px)",
+      "parent": "materialSection",
+      "default": 22,
+      "scope": "device",
+      "min": 0,
+      "max": 48,
+      "step": 1
+    },
+    {
+      "id": "panelBorderWidth",
+      "type": "range",
+      "label": "Contour du panneau (px)",
+      "parent": "materialSection",
+      "default": 0,
+      "scope": "device",
+      "min": 0,
+      "max": 4,
+      "step": 0.5
+    },
+    {
+      "id": "panelBorderColor",
+      "type": "color",
+      "label": "Couleur du contour",
+      "parent": "materialSection",
+      "default": "#66D9DB80",
+      "scope": "device",
+      "alpha": true,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "shadowOpacity",
+      "type": "range",
+      "label": "Intensité de l’ombre (%)",
+      "parent": "materialSection",
+      "default": 35,
+      "scope": "device",
+      "min": 0,
+      "max": 75,
+      "step": 1
+    },
+    {
+      "id": "shadowBlur",
+      "type": "range",
+      "label": "Douceur de l’ombre (px)",
+      "parent": "materialSection",
+      "default": 36,
+      "scope": "device",
+      "min": 0,
+      "max": 80,
+      "step": 2
+    },
+    {
+      "id": "shadowDistance",
+      "type": "range",
+      "label": "Décalage de l’ombre (px)",
+      "parent": "materialSection",
+      "default": 12,
+      "scope": "device",
+      "min": 0,
+      "max": 28,
+      "step": 1
+    },
+    {
+      "id": "cardSection",
+      "type": "section",
+      "label": "Cartes et sélection",
+      "defaultCollapsed": false
+    },
+    {
+      "id": "cardColor",
+      "type": "color",
+      "label": "Fond des cartes",
+      "parent": "cardSection",
+      "default": "#173846FF",
+      "scope": "device",
+      "alpha": true,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "selectedColor",
+      "type": "color",
+      "label": "Fond de la carte sélectionnée",
+      "parent": "cardSection",
+      "default": "#215B66FF",
+      "scope": "device",
+      "alpha": true,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "hoverColor",
+      "type": "color",
+      "label": "Fond au survol",
+      "parent": "cardSection",
+      "default": "#24505CFF",
+      "scope": "device",
+      "alpha": true,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "textColor",
+      "type": "color",
+      "label": "Texte principal",
+      "parent": "cardSection",
+      "default": "#F0FFFFFF",
+      "scope": "device",
+      "alpha": true,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "mutedColor",
+      "type": "color",
+      "label": "Texte secondaire",
+      "parent": "cardSection",
+      "default": "#BCDAE0FF",
+      "scope": "device",
+      "alpha": true,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "accentColor",
+      "type": "color",
+      "label": "Accent de sélection",
+      "parent": "cardSection",
+      "default": "#71F5DBFF",
+      "scope": "device",
+      "alpha": true,
+      "showIf": {
+        "setting": "profile",
+        "equals": "custom"
+      }
+    },
+    {
+      "id": "previewOpacity",
+      "type": "range",
+      "label": "Opacité des aperçus (%)",
+      "parent": "cardSection",
+      "default": 100,
+      "scope": "device",
+      "min": 40,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "id": "previewFit",
+      "type": "select",
+      "label": "Cadrage de l’aperçu",
+      "parent": "cardSection",
+      "default": "contain",
+      "scope": "device",
+      "options": [
+        {
+          "value": "contain",
+          "label": "Fenêtre entière"
+        },
+        {
+          "value": "cover",
+          "label": "Remplir la carte"
+        }
+      ]
+    },
+    {
+      "id": "previewClientOnly",
+      "type": "boolean",
+      "label": "Aperçu sans la barre de titre",
+      "parent": "cardSection",
+      "default": false,
+      "scope": "device",
+      "description": "Demande à DWM de ne montrer que le contenu de la fenêtre."
+    },
+    {
+      "id": "showIcon",
+      "type": "boolean",
+      "label": "Icône de l’application",
+      "parent": "cardSection",
+      "default": true,
+      "scope": "device",
+      "description": "L’icône réelle de la fenêtre apparaît si Windows la fournit."
+    },
+    {
+      "id": "showTitle",
+      "type": "boolean",
+      "label": "Titre de la fenêtre",
+      "parent": "cardSection",
+      "default": true,
+      "scope": "device",
+      "description": "Un titre abrégé reste disponible pour l’accessibilité."
+    },
+    {
+      "id": "showApplication",
+      "type": "boolean",
+      "label": "Nom de l’application",
+      "parent": "cardSection",
+      "default": true,
+      "scope": "device",
+      "description": "Affiche le nom de l’exécutable sans son extension."
+    },
+    {
+      "id": "showScreen",
+      "type": "boolean",
+      "label": "Numéro d’écran",
+      "parent": "cardSection",
+      "default": false,
+      "scope": "device",
+      "description": "Utile quand vous recherchez parmi plusieurs écrans."
+    },
+    {
+      "id": "showMinimizedBadge",
+      "type": "boolean",
+      "label": "Indiquer les fenêtres réduites",
+      "parent": "cardSection",
+      "default": true,
+      "scope": "device",
+      "description": "Les fenêtres réduites affichent une représentation de remplacement quand l’aperçu n’est pas disponible."
+    },
+    {
+      "id": "cardBorderWidth",
+      "type": "range",
+      "label": "Contour des cartes (px)",
+      "parent": "cardSection",
+      "default": 0,
+      "scope": "device",
+      "min": 0,
+      "max": 3,
+      "step": 0.5
+    },
+    {
+      "id": "selectionBorderWidth",
+      "type": "range",
+      "label": "Contour de sélection (px)",
+      "parent": "cardSection",
+      "default": 3,
+      "scope": "device",
+      "min": 1,
+      "max": 6,
+      "step": 0.5
+    },
+    {
+      "id": "inactiveOpacity",
+      "type": "range",
+      "label": "Opacité des cartes non sélectionnées (%)",
+      "parent": "cardSection",
+      "default": 90,
+      "scope": "device",
+      "min": 35,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "id": "typeSection",
+      "type": "section",
+      "label": "Lisibilité",
+      "defaultCollapsed": false
+    },
+    {
+      "id": "fontFamily",
+      "type": "select",
+      "label": "Police",
+      "parent": "typeSection",
+      "default": "system",
+      "scope": "device",
+      "options": [
+        {
+          "value": "system",
+          "label": "Segoe UI Variable"
+        },
+        {
+          "value": "segoe",
+          "label": "Segoe UI"
+        },
+        {
+          "value": "arial",
+          "label": "Arial"
+        },
+        {
+          "value": "consolas",
+          "label": "Consolas"
+        }
+      ]
+    },
+    {
+      "id": "titleFontSize",
+      "type": "range",
+      "label": "Taille des titres (px)",
+      "parent": "typeSection",
+      "default": 15,
+      "scope": "device",
+      "min": 12,
+      "max": 24,
+      "step": 1
+    },
+    {
+      "id": "appFontSize",
+      "type": "range",
+      "label": "Taille du texte secondaire (px)",
+      "parent": "typeSection",
+      "default": 12,
+      "scope": "device",
+      "min": 10,
+      "max": 18,
+      "step": 1
+    },
+    {
+      "id": "titleWeight",
+      "type": "select",
+      "label": "Épaisseur des titres",
+      "parent": "typeSection",
+      "default": "semibold",
+      "scope": "device",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normale"
+        },
+        {
+          "value": "medium",
+          "label": "Moyenne"
+        },
+        {
+          "value": "semibold",
+          "label": "Semi-grasse"
+        }
+      ]
+    },
+    {
+      "id": "navigationSection",
+      "type": "section",
+      "label": "Navigation et actions",
+      "defaultCollapsed": false
+    },
+    {
+      "id": "wrapNavigation",
+      "type": "boolean",
+      "label": "Revenir au début après la dernière fenêtre",
+      "parent": "navigationSection",
+      "default": true,
+      "scope": "device",
+      "description": "S’applique à Tab, aux flèches et à la molette."
+    },
+    {
+      "id": "hoverSelect",
+      "type": "boolean",
+      "label": "Sélectionner au survol",
+      "parent": "navigationSection",
+      "default": false,
+      "scope": "device",
+      "description": "Le clic choisit toujours la fenêtre."
+    },
+    {
+      "id": "mouseWheel",
+      "type": "boolean",
+      "label": "Parcourir avec la molette",
+      "parent": "navigationSection",
+      "default": true,
+      "scope": "device",
+      "description": "Une encoche sélectionne la carte suivante ou précédente."
+    },
+    {
+      "id": "showClose",
+      "type": "boolean",
+      "label": "Bouton Fermer sur les cartes",
+      "parent": "navigationSection",
+      "default": true,
+      "scope": "device",
+      "description": "Demande une fermeture normale ; l’application peut demander d’enregistrer."
+    },
+    {
+      "id": "closeConfirm",
+      "type": "boolean",
+      "label": "Confirmer avant de fermer",
+      "parent": "navigationSection",
+      "default": true,
+      "scope": "device",
+      "description": "La confirmation fonctionne aussi avec Suppr."
+    },
+    {
+      "id": "searchEnabled",
+      "type": "boolean",
+      "label": "Rechercher par titre ou application",
+      "parent": "navigationSection",
+      "default": true,
+      "scope": "device",
+      "description": "Dans le sélecteur ouvert par raccourci, commencez à saisir pour filtrer."
+    },
+    {
+      "id": "dismissOutside",
+      "type": "boolean",
+      "label": "Annuler en cliquant hors du panneau",
+      "parent": "navigationSection",
+      "default": true,
+      "scope": "device",
+      "description": "L’application précédemment active retrouve le focus."
+    },
+    {
+      "id": "dismissOnFocusLoss",
+      "type": "boolean",
+      "label": "Annuler quand une autre application prend le focus",
+      "parent": "navigationSection",
+      "default": true,
+      "scope": "device",
+      "description": "Ne garde pas le sélecteur au-dessus d’une autre action."
+    },
+    {
+      "id": "showHints",
+      "type": "boolean",
+      "label": "Afficher les commandes clavier",
+      "parent": "navigationSection",
+      "default": true,
+      "scope": "device",
+      "description": "Tab et flèches : parcourir ; Entrée : choisir ; Échap : annuler ; Suppr : fermer."
+    },
+    {
+      "id": "motionSection",
+      "type": "section",
+      "label": "Mouvements",
+      "defaultCollapsed": false
+    },
+    {
+      "id": "animationMode",
+      "type": "select",
+      "label": "Ouverture du panneau",
+      "parent": "motionSection",
+      "default": "slide",
+      "scope": "device",
+      "options": [
+        {
+          "value": "none",
+          "label": "Immédiate"
+        },
+        {
+          "value": "fade",
+          "label": "Fondu"
+        },
+        {
+          "value": "slide",
+          "label": "Glissement doux"
+        },
+        {
+          "value": "spring",
+          "label": "Ressort léger"
+        }
+      ]
+    },
+    {
+      "id": "animationDurationMs",
+      "type": "range",
+      "label": "Durée d’ouverture (ms)",
+      "parent": "motionSection",
+      "default": 190,
+      "scope": "device",
+      "min": 0,
+      "max": 700,
+      "step": 10
+    },
+    {
+      "id": "selectionDurationMs",
+      "type": "range",
+      "label": "Transition de sélection (ms)",
+      "parent": "motionSection",
+      "default": 120,
+      "scope": "device",
+      "min": 0,
+      "max": 400,
+      "step": 10
+    },
+    {
+      "id": "hoverScale",
+      "type": "range",
+      "label": "Agrandissement au survol",
+      "parent": "motionSection",
+      "default": 1.03,
+      "scope": "device",
+      "min": 1,
+      "max": 1.1,
+      "step": 0.01
+    },
+    {
+      "id": "hoverLift",
+      "type": "range",
+      "label": "Soulèvement au survol (px)",
+      "parent": "motionSection",
+      "default": 3,
+      "scope": "device",
+      "min": 0,
+      "max": 12,
+      "step": 1
+    },
+    {
+      "id": "flipDepth",
+      "type": "range",
+      "label": "Écart de profondeur en cascade (px)",
+      "parent": "motionSection",
+      "default": 44,
+      "scope": "device",
+      "min": 20,
+      "max": 90,
+      "step": 2,
+      "showIf": {
+        "setting": "layout",
+        "equals": "flip"
+      }
+    },
+    {
+      "id": "flipVisible",
+      "type": "range",
+      "label": "Cartes visibles dans la cascade",
+      "parent": "motionSection",
+      "default": 5,
+      "scope": "device",
+      "min": 3,
+      "max": 9,
+      "step": 1,
+      "showIf": {
+        "setting": "layout",
+        "equals": "flip"
+      }
+    },
+    {
+      "id": "reduceMotion",
+      "type": "boolean",
+      "label": "Réduire les animations",
+      "parent": "motionSection",
+      "default": false,
+      "scope": "device",
+      "description": "Coupe l’entrée, le survol animé et les transitions."
+    },
+    {
+      "id": "followWindowsMotion",
+      "type": "boolean",
+      "label": "Respecter la réduction d’animation de Windows",
+      "parent": "motionSection",
+      "default": true,
+      "scope": "device",
+      "description": "Suit le réglage d’accessibilité Windows."
+    },
+    {
+      "id": "advancedSection",
+      "type": "section",
+      "label": "Performance — facultatif",
+      "defaultCollapsed": true
+    },
+    {
+      "id": "previewBudget",
+      "type": "range",
+      "label": "Aperçus simultanés au maximum",
+      "parent": "advancedSection",
+      "default": 24,
+      "scope": "device",
+      "min": 4,
+      "max": 48,
+      "step": 1,
+      "description": "Les autres cartes gardent titre et icône. Aucun contenu de fenêtre n’est enregistré sur disque."
+    },
+    {
+      "id": "refreshMs",
+      "type": "range",
+      "label": "Actualiser la liste toutes les (ms)",
+      "parent": "advancedSection",
+      "default": 1000,
+      "scope": "device",
+      "min": 500,
+      "max": 5000,
+      "step": 100
+    },
+    {
+      "id": "maxCandidates",
+      "type": "range",
+      "label": "Fenêtres examinées au maximum",
+      "parent": "advancedSection",
+      "default": 160,
+      "scope": "device",
+      "min": 16,
+      "max": 240,
+      "step": 8
+    }
+  ],
+  "native": {
+    "companion": {
+      "runtime": "process-v2",
+      "entries": {
+        "windows-x86_64": "native/out/windows-x86_64/companion.exe"
+      }
+    }
+  },
+  "presets": [
+    {
+      "id": "boreal",
+      "name": "Verre boréal",
+      "settings": {
+        "enabled": true,
+        "profile": "boreal",
+        "layout": "profile",
+        "activationMode": "shortcut",
+        "shortcut": "ctrlAltSpace",
+        "openDelayMs": 120,
+        "fullscreenBypass": true,
+        "placement": "cursor",
+        "panelWidthPct": 80,
+        "panelHeightPct": 80,
+        "columns": 0,
+        "cardWidth": 280,
+        "previewAspect": "wide",
+        "density": "balanced",
+        "gap": 16,
+        "padding": 28,
+        "cardRadius": 14,
+        "pageSize": 24,
+        "sort": "recent",
+        "listPreview": true,
+        "groupApplications": false,
+        "windowScreen": "all",
+        "minimized": "include",
+        "includeApplications": "",
+        "excludeApplications": "",
+        "hideGhosts": true,
+        "minWindowSize": 48,
+        "hideUntitled": true,
+        "hideHung": false,
+        "material": "glass",
+        "surfaceColor": "#102A36FF",
+        "gradientEnd": "#153E48FF",
+        "gradientAngle": 30,
+        "surfaceOpacity": 86,
+        "desktopDim": 30,
+        "panelRadius": 22,
+        "panelBorderWidth": 0,
+        "panelBorderColor": "#66D9DB80",
+        "shadowOpacity": 35,
+        "shadowBlur": 36,
+        "shadowDistance": 12,
+        "cardColor": "#173846FF",
+        "selectedColor": "#215B66FF",
+        "hoverColor": "#24505CFF",
+        "textColor": "#F0FFFFFF",
+        "mutedColor": "#BCDAE0FF",
+        "accentColor": "#71F5DBFF",
+        "previewOpacity": 100,
+        "previewFit": "contain",
+        "previewClientOnly": false,
+        "showIcon": true,
+        "showTitle": true,
+        "showApplication": true,
+        "showScreen": false,
+        "showMinimizedBadge": true,
+        "cardBorderWidth": 0,
+        "selectionBorderWidth": 3,
+        "inactiveOpacity": 90,
+        "fontFamily": "system",
+        "titleFontSize": 15,
+        "appFontSize": 12,
+        "titleWeight": "semibold",
+        "wrapNavigation": true,
+        "hoverSelect": false,
+        "mouseWheel": true,
+        "showClose": true,
+        "closeConfirm": true,
+        "searchEnabled": true,
+        "dismissOutside": true,
+        "dismissOnFocusLoss": true,
+        "showHints": true,
+        "animationMode": "slide",
+        "animationDurationMs": 190,
+        "selectionDurationMs": 120,
+        "hoverScale": 1.03,
+        "hoverLift": 3,
+        "flipDepth": 44,
+        "flipVisible": 5,
+        "reduceMotion": false,
+        "followWindowsMotion": true,
+        "previewBudget": 24,
+        "refreshMs": 1000,
+        "maxCandidates": 160
+      }
+    },
+    {
+      "id": "midnight",
+      "name": "Minuit",
+      "settings": {
+        "enabled": true,
+        "profile": "midnight",
+        "layout": "profile",
+        "activationMode": "shortcut",
+        "shortcut": "ctrlAltSpace",
+        "openDelayMs": 120,
+        "fullscreenBypass": true,
+        "placement": "cursor",
+        "panelWidthPct": 80,
+        "panelHeightPct": 80,
+        "columns": 0,
+        "cardWidth": 280,
+        "previewAspect": "wide",
+        "density": "balanced",
+        "gap": 16,
+        "padding": 28,
+        "cardRadius": 14,
+        "pageSize": 24,
+        "sort": "recent",
+        "listPreview": true,
+        "groupApplications": false,
+        "windowScreen": "all",
+        "minimized": "include",
+        "includeApplications": "",
+        "excludeApplications": "",
+        "hideGhosts": true,
+        "minWindowSize": 48,
+        "hideUntitled": true,
+        "hideHung": false,
+        "material": "solid",
+        "surfaceColor": "#101826FF",
+        "gradientEnd": "#152439FF",
+        "gradientAngle": 30,
+        "surfaceOpacity": 100,
+        "desktopDim": 30,
+        "panelRadius": 22,
+        "panelBorderWidth": 0,
+        "panelBorderColor": "#456088FF",
+        "shadowOpacity": 35,
+        "shadowBlur": 36,
+        "shadowDistance": 12,
+        "cardColor": "#1B293FFF",
+        "selectedColor": "#284569FF",
+        "hoverColor": "#273954FF",
+        "textColor": "#F4F7FFFF",
+        "mutedColor": "#BBC9E2FF",
+        "accentColor": "#9EC5FFFF",
+        "previewOpacity": 100,
+        "previewFit": "contain",
+        "previewClientOnly": false,
+        "showIcon": true,
+        "showTitle": true,
+        "showApplication": true,
+        "showScreen": false,
+        "showMinimizedBadge": true,
+        "cardBorderWidth": 0,
+        "selectionBorderWidth": 3,
+        "inactiveOpacity": 90,
+        "fontFamily": "system",
+        "titleFontSize": 15,
+        "appFontSize": 12,
+        "titleWeight": "semibold",
+        "wrapNavigation": true,
+        "hoverSelect": false,
+        "mouseWheel": true,
+        "showClose": true,
+        "closeConfirm": true,
+        "searchEnabled": true,
+        "dismissOutside": true,
+        "dismissOnFocusLoss": true,
+        "showHints": true,
+        "animationMode": "slide",
+        "animationDurationMs": 190,
+        "selectionDurationMs": 120,
+        "hoverScale": 1.03,
+        "hoverLift": 3,
+        "flipDepth": 44,
+        "flipVisible": 5,
+        "reduceMotion": false,
+        "followWindowsMotion": true,
+        "previewBudget": 24,
+        "refreshMs": 1000,
+        "maxCandidates": 160
+      }
+    },
+    {
+      "id": "rose",
+      "name": "Rose électrique",
+      "settings": {
+        "enabled": true,
+        "profile": "rose",
+        "layout": "profile",
+        "activationMode": "shortcut",
+        "shortcut": "ctrlAltSpace",
+        "openDelayMs": 120,
+        "fullscreenBypass": true,
+        "placement": "cursor",
+        "panelWidthPct": 80,
+        "panelHeightPct": 80,
+        "columns": 0,
+        "cardWidth": 280,
+        "previewAspect": "wide",
+        "density": "balanced",
+        "gap": 16,
+        "padding": 28,
+        "cardRadius": 14,
+        "pageSize": 24,
+        "sort": "recent",
+        "listPreview": true,
+        "groupApplications": false,
+        "windowScreen": "all",
+        "minimized": "include",
+        "includeApplications": "",
+        "excludeApplications": "",
+        "hideGhosts": true,
+        "minWindowSize": 48,
+        "hideUntitled": true,
+        "hideHung": false,
+        "material": "gradient",
+        "surfaceColor": "#36172DFF",
+        "gradientEnd": "#591F41FF",
+        "gradientAngle": 35,
+        "surfaceOpacity": 100,
+        "desktopDim": 30,
+        "panelRadius": 22,
+        "panelBorderWidth": 0,
+        "panelBorderColor": "#AD547FFF",
+        "shadowOpacity": 35,
+        "shadowBlur": 36,
+        "shadowDistance": 12,
+        "cardColor": "#54243FFF",
+        "selectedColor": "#7C335BFF",
+        "hoverColor": "#69304FFF",
+        "textColor": "#FFF4FAFF",
+        "mutedColor": "#F3BCD5FF",
+        "accentColor": "#FFB8DDFF",
+        "previewOpacity": 100,
+        "previewFit": "contain",
+        "previewClientOnly": false,
+        "showIcon": true,
+        "showTitle": true,
+        "showApplication": true,
+        "showScreen": false,
+        "showMinimizedBadge": true,
+        "cardBorderWidth": 0,
+        "selectionBorderWidth": 3,
+        "inactiveOpacity": 90,
+        "fontFamily": "system",
+        "titleFontSize": 15,
+        "appFontSize": 12,
+        "titleWeight": "semibold",
+        "wrapNavigation": true,
+        "hoverSelect": false,
+        "mouseWheel": true,
+        "showClose": true,
+        "closeConfirm": true,
+        "searchEnabled": true,
+        "dismissOutside": true,
+        "dismissOnFocusLoss": true,
+        "showHints": true,
+        "animationMode": "slide",
+        "animationDurationMs": 190,
+        "selectionDurationMs": 120,
+        "hoverScale": 1.03,
+        "hoverLift": 3,
+        "flipDepth": 44,
+        "flipVisible": 5,
+        "reduceMotion": false,
+        "followWindowsMotion": true,
+        "previewBudget": 24,
+        "refreshMs": 1000,
+        "maxCandidates": 160
+      }
+    },
+    {
+      "id": "paper",
+      "name": "Papier",
+      "settings": {
+        "enabled": true,
+        "profile": "paper",
+        "layout": "profile",
+        "activationMode": "shortcut",
+        "shortcut": "ctrlAltSpace",
+        "openDelayMs": 120,
+        "fullscreenBypass": true,
+        "placement": "cursor",
+        "panelWidthPct": 80,
+        "panelHeightPct": 80,
+        "columns": 0,
+        "cardWidth": 280,
+        "previewAspect": "wide",
+        "density": "balanced",
+        "gap": 16,
+        "padding": 28,
+        "cardRadius": 14,
+        "pageSize": 24,
+        "sort": "recent",
+        "listPreview": true,
+        "groupApplications": false,
+        "windowScreen": "all",
+        "minimized": "include",
+        "includeApplications": "",
+        "excludeApplications": "",
+        "hideGhosts": true,
+        "minWindowSize": 48,
+        "hideUntitled": true,
+        "hideHung": false,
+        "material": "solid",
+        "surfaceColor": "#F7F3E9FF",
+        "gradientEnd": "#EFE8D9FF",
+        "gradientAngle": 30,
+        "surfaceOpacity": 100,
+        "desktopDim": 30,
+        "panelRadius": 22,
+        "panelBorderWidth": 0,
+        "panelBorderColor": "#C1AD89FF",
+        "shadowOpacity": 35,
+        "shadowBlur": 36,
+        "shadowDistance": 12,
+        "cardColor": "#EEE6D6FF",
+        "selectedColor": "#DFD3BAFF",
+        "hoverColor": "#E7DCC7FF",
+        "textColor": "#27251FFF",
+        "mutedColor": "#615847FF",
+        "accentColor": "#735529FF",
+        "previewOpacity": 100,
+        "previewFit": "contain",
+        "previewClientOnly": false,
+        "showIcon": true,
+        "showTitle": true,
+        "showApplication": true,
+        "showScreen": false,
+        "showMinimizedBadge": true,
+        "cardBorderWidth": 0,
+        "selectionBorderWidth": 3,
+        "inactiveOpacity": 90,
+        "fontFamily": "system",
+        "titleFontSize": 15,
+        "appFontSize": 12,
+        "titleWeight": "semibold",
+        "wrapNavigation": true,
+        "hoverSelect": false,
+        "mouseWheel": true,
+        "showClose": true,
+        "closeConfirm": true,
+        "searchEnabled": true,
+        "dismissOutside": true,
+        "dismissOnFocusLoss": true,
+        "showHints": true,
+        "animationMode": "slide",
+        "animationDurationMs": 190,
+        "selectionDurationMs": 120,
+        "hoverScale": 1.03,
+        "hoverLift": 3,
+        "flipDepth": 44,
+        "flipVisible": 5,
+        "reduceMotion": false,
+        "followWindowsMotion": true,
+        "previewBudget": 24,
+        "refreshMs": 1000,
+        "maxCandidates": 160
+      }
+    },
+    {
+      "id": "cinema",
+      "name": "Cinéma",
+      "settings": {
+        "enabled": true,
+        "profile": "cinema",
+        "layout": "profile",
+        "activationMode": "shortcut",
+        "shortcut": "ctrlAltSpace",
+        "openDelayMs": 120,
+        "fullscreenBypass": true,
+        "placement": "cursor",
+        "panelWidthPct": 80,
+        "panelHeightPct": 80,
+        "columns": 0,
+        "cardWidth": 280,
+        "previewAspect": "wide",
+        "density": "balanced",
+        "gap": 16,
+        "padding": 28,
+        "cardRadius": 14,
+        "pageSize": 24,
+        "sort": "recent",
+        "listPreview": true,
+        "groupApplications": false,
+        "windowScreen": "all",
+        "minimized": "include",
+        "includeApplications": "",
+        "excludeApplications": "",
+        "hideGhosts": true,
+        "minWindowSize": 48,
+        "hideUntitled": true,
+        "hideHung": false,
+        "material": "gradient",
+        "surfaceColor": "#101011FF",
+        "gradientEnd": "#272017FF",
+        "gradientAngle": 90,
+        "surfaceOpacity": 100,
+        "desktopDim": 30,
+        "panelRadius": 22,
+        "panelBorderWidth": 0,
+        "panelBorderColor": "#806E49FF",
+        "shadowOpacity": 35,
+        "shadowBlur": 36,
+        "shadowDistance": 12,
+        "cardColor": "#25221CFF",
+        "selectedColor": "#453820FF",
+        "hoverColor": "#393022FF",
+        "textColor": "#FFF9EAFF",
+        "mutedColor": "#D0BE96FF",
+        "accentColor": "#F4CF7BFF",
+        "previewOpacity": 100,
+        "previewFit": "contain",
+        "previewClientOnly": false,
+        "showIcon": true,
+        "showTitle": true,
+        "showApplication": true,
+        "showScreen": false,
+        "showMinimizedBadge": true,
+        "cardBorderWidth": 0,
+        "selectionBorderWidth": 3,
+        "inactiveOpacity": 90,
+        "fontFamily": "system",
+        "titleFontSize": 15,
+        "appFontSize": 12,
+        "titleWeight": "semibold",
+        "wrapNavigation": true,
+        "hoverSelect": false,
+        "mouseWheel": true,
+        "showClose": true,
+        "closeConfirm": true,
+        "searchEnabled": true,
+        "dismissOutside": true,
+        "dismissOnFocusLoss": true,
+        "showHints": true,
+        "animationMode": "slide",
+        "animationDurationMs": 190,
+        "selectionDurationMs": 120,
+        "hoverScale": 1.03,
+        "hoverLift": 3,
+        "flipDepth": 44,
+        "flipVisible": 5,
+        "reduceMotion": false,
+        "followWindowsMotion": true,
+        "previewBudget": 24,
+        "refreshMs": 1000,
+        "maxCandidates": 160
+      }
+    },
+    {
+      "id": "classic",
+      "name": "Classique",
+      "settings": {
+        "enabled": true,
+        "profile": "classic",
+        "layout": "profile",
+        "activationMode": "shortcut",
+        "shortcut": "ctrlAltSpace",
+        "openDelayMs": 120,
+        "fullscreenBypass": true,
+        "placement": "cursor",
+        "panelWidthPct": 80,
+        "panelHeightPct": 80,
+        "columns": 0,
+        "cardWidth": 280,
+        "previewAspect": "wide",
+        "density": "balanced",
+        "gap": 16,
+        "padding": 28,
+        "cardRadius": 14,
+        "pageSize": 24,
+        "sort": "recent",
+        "listPreview": true,
+        "groupApplications": false,
+        "windowScreen": "all",
+        "minimized": "include",
+        "includeApplications": "",
+        "excludeApplications": "",
+        "hideGhosts": true,
+        "minWindowSize": 48,
+        "hideUntitled": true,
+        "hideHung": false,
+        "material": "solid",
+        "surfaceColor": "#232323FF",
+        "gradientEnd": "#232323FF",
+        "gradientAngle": 30,
+        "surfaceOpacity": 100,
+        "desktopDim": 30,
+        "panelRadius": 22,
+        "panelBorderWidth": 0,
+        "panelBorderColor": "#696969FF",
+        "shadowOpacity": 35,
+        "shadowBlur": 36,
+        "shadowDistance": 12,
+        "cardColor": "#303030FF",
+        "selectedColor": "#1F4E7CFF",
+        "hoverColor": "#424242FF",
+        "textColor": "#FFFFFFFF",
+        "mutedColor": "#D2D2D2FF",
+        "accentColor": "#A5D6FFFF",
+        "previewOpacity": 100,
+        "previewFit": "contain",
+        "previewClientOnly": false,
+        "showIcon": true,
+        "showTitle": true,
+        "showApplication": true,
+        "showScreen": false,
+        "showMinimizedBadge": true,
+        "cardBorderWidth": 0,
+        "selectionBorderWidth": 3,
+        "inactiveOpacity": 90,
+        "fontFamily": "system",
+        "titleFontSize": 15,
+        "appFontSize": 12,
+        "titleWeight": "semibold",
+        "wrapNavigation": true,
+        "hoverSelect": false,
+        "mouseWheel": true,
+        "showClose": true,
+        "closeConfirm": true,
+        "searchEnabled": true,
+        "dismissOutside": true,
+        "dismissOnFocusLoss": true,
+        "showHints": true,
+        "animationMode": "slide",
+        "animationDurationMs": 190,
+        "selectionDurationMs": 120,
+        "hoverScale": 1.03,
+        "hoverLift": 3,
+        "flipDepth": 44,
+        "flipVisible": 5,
+        "reduceMotion": false,
+        "followWindowsMotion": true,
+        "previewBudget": 24,
+        "refreshMs": 1000,
+        "maxCandidates": 160
+      }
+    },
+    {
+      "id": "flip",
+      "name": "Cascade Flip",
+      "settings": {
+        "enabled": true,
+        "profile": "flip",
+        "layout": "profile",
+        "activationMode": "shortcut",
+        "shortcut": "ctrlAltSpace",
+        "openDelayMs": 120,
+        "fullscreenBypass": true,
+        "placement": "cursor",
+        "panelWidthPct": 80,
+        "panelHeightPct": 80,
+        "columns": 0,
+        "cardWidth": 280,
+        "previewAspect": "wide",
+        "density": "balanced",
+        "gap": 16,
+        "padding": 28,
+        "cardRadius": 14,
+        "pageSize": 24,
+        "sort": "recent",
+        "listPreview": true,
+        "groupApplications": false,
+        "windowScreen": "all",
+        "minimized": "include",
+        "includeApplications": "",
+        "excludeApplications": "",
+        "hideGhosts": true,
+        "minWindowSize": 48,
+        "hideUntitled": true,
+        "hideHung": false,
+        "material": "gradient",
+        "surfaceColor": "#141C33FF",
+        "gradientEnd": "#2B254AFF",
+        "gradientAngle": 145,
+        "surfaceOpacity": 100,
+        "desktopDim": 30,
+        "panelRadius": 22,
+        "panelBorderWidth": 0,
+        "panelBorderColor": "#7C73ADFF",
+        "shadowOpacity": 35,
+        "shadowBlur": 36,
+        "shadowDistance": 12,
+        "cardColor": "#263252FF",
+        "selectedColor": "#3B4B79FF",
+        "hoverColor": "#3A3F65FF",
+        "textColor": "#F5F0FFFF",
+        "mutedColor": "#CCC5E9FF",
+        "accentColor": "#C3B2FFFF",
+        "previewOpacity": 100,
+        "previewFit": "contain",
+        "previewClientOnly": false,
+        "showIcon": true,
+        "showTitle": true,
+        "showApplication": true,
+        "showScreen": false,
+        "showMinimizedBadge": true,
+        "cardBorderWidth": 0,
+        "selectionBorderWidth": 3,
+        "inactiveOpacity": 90,
+        "fontFamily": "system",
+        "titleFontSize": 15,
+        "appFontSize": 12,
+        "titleWeight": "semibold",
+        "wrapNavigation": true,
+        "hoverSelect": false,
+        "mouseWheel": true,
+        "showClose": true,
+        "closeConfirm": true,
+        "searchEnabled": true,
+        "dismissOutside": true,
+        "dismissOnFocusLoss": true,
+        "showHints": true,
+        "animationMode": "slide",
+        "animationDurationMs": 190,
+        "selectionDurationMs": 120,
+        "hoverScale": 1.03,
+        "hoverLift": 3,
+        "flipDepth": 44,
+        "flipVisible": 5,
+        "reduceMotion": false,
+        "followWindowsMotion": true,
+        "previewBudget": 24,
+        "refreshMs": 1000,
+        "maxCandidates": 160
+      }
+    }
+  ]
+}

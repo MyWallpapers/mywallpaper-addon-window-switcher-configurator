@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "boreal",
+  "name": "Verre boréal",
+  "layout": "grid",
+  "material": "glass",
+  "surfaceColor": "#102A36FF",
+  "gradientEnd": "#153E48FF",
+  "surfaceOpacity": 86,
+  "cardColor": "#173846FF",
+  "selectedColor": "#215B66FF",
+  "hoverColor": "#24505CFF",
+  "textColor": "#F0FFFFFF",
+  "mutedColor": "#BCDAE0FF",
+  "accentColor": "#71F5DBFF",
+  "panelBorderColor": "#66D9DB80"
+}
