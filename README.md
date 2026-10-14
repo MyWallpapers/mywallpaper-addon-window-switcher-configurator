@@ -40,7 +40,7 @@ Le panneau dispose d’un fond uni, dégradé ou verre Windows avec secours opaq
 
 ## Construire et essayer
 
-Prérequis : Windows x64, **SDK .NET 8.0.425** (`global.json`) et Node. Le build n’exige pas de privilèges administrateur. Le script utilise un SDK déjà installé ou le cache local `MyWallpaperAddonBuild/dotnet-8.0.425` ; il ne télécharge rien implicitement. [Téléchargement officiel .NET](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+Prérequis : Windows x64 et Node. Le build utilise exactement le **SDK .NET 8.0.425** (`global.json`), déjà installé ou présent dans le cache `MyWallpaperAddonBuild/dotnet-8.0.425`. S’il manque, le script télécharge l’archive officielle Microsoft, vérifie son SHA-512 épinglé puis la décompresse dans ce cache de compilation. Aucun privilège administrateur ni installation système n’est nécessaire ; l’application distribuée embarque son runtime. `-DotnetPath` impose un SDK existant et désactive ce téléchargement automatique. [Téléchargement officiel .NET](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File native/build.ps1

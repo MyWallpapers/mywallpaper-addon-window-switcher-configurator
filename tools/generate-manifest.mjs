@@ -115,7 +115,7 @@ range('refreshMs', 'Actualiser la liste toutes les (ms)', 1000, 500, 5000, 100);
 range('maxCandidates', 'Fenêtres examinées au maximum', 160, 16, 240, 8);
 
 if (settings.length > 100) throw new Error(`Manifest settings: ${settings.length} exceeds DEC-0012`);
-const manifest = { runtime: 'native-v1', name: 'Sélecteur de fenêtres', description: 'Un sélecteur personnalisable : grille, liste, classique, cascade et carte du bureau, avec aperçus DWM, profils et navigation clavier.', version: '0.1.1', deviceSettingsVersion: '1', settings, native: { companion: { runtime: 'process-v2', entries: { 'windows-x86_64': 'native/out/windows-x86_64/companion.exe' } } } };
+const manifest = { runtime: 'native-v1', name: 'Sélecteur de fenêtres', description: 'Un sélecteur personnalisable : grille, liste, classique, cascade et carte du bureau, avec aperçus DWM, profils et navigation clavier.', version: '0.1.2', deviceSettingsVersion: '1', settings, native: { companion: { runtime: 'process-v2', entries: { 'windows-x86_64': 'native/out/windows-x86_64/companion.exe' } } } };
 
 // Profiles own visual intent only. Interaction and the user's geometry remain independent.
 const profiles = {

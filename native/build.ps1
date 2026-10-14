@@ -1,18 +1,37 @@
 param([string]$DotnetPath, [switch]$FrameworkDependent)
 $ErrorActionPreference = 'Stop'
 $repoRoot = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
-if (-not $DotnetPath) {
-    $cachedSdk = Join-Path $env:LOCALAPPDATA 'MyWallpaperAddonBuild/dotnet-8.0.425/dotnet.exe'
-    if (Test-Path -LiteralPath $cachedSdk) { $DotnetPath = $cachedSdk }
-    else { $DotnetPath = (Get-Command dotnet.exe -ErrorAction Stop).Source }
-}
-$DotnetPath = (Resolve-Path -LiteralPath $DotnetPath).Path
 $env:DOTNET_CLI_TELEMETRY_OPTOUT = '1'
 Push-Location -LiteralPath $repoRoot
 try {
+    $expectedSdk = (Get-Content -LiteralPath (Join-Path $repoRoot 'global.json') -Raw | ConvertFrom-Json).sdk.version
+    if (-not $DotnetPath) {
+        $cacheRoot = [System.IO.Path]::GetFullPath((Join-Path $env:LOCALAPPDATA 'MyWallpaperAddonBuild/dotnet-8.0.425'))
+        $cachedSdk = Join-Path $cacheRoot 'dotnet.exe'
+        $systemSdk = (Get-Command dotnet.exe -ErrorAction SilentlyContinue).Source
+        foreach ($candidate in @($cachedSdk, $systemSdk)) {
+            if ($candidate -and (Test-Path -LiteralPath $candidate)) {
+                try { $candidateVersion = & $candidate --version 2>$null } catch { $candidateVersion = $null }
+                if ($LASTEXITCODE -eq 0 -and $candidateVersion -eq $expectedSdk) { $DotnetPath = $candidate; break }
+            }
+        }
+        if (-not $DotnetPath) {
+            if ($expectedSdk -ne '8.0.425') { throw 'Update the pinned SDK archive and hash before changing global.json.' }
+            New-Item -ItemType Directory -Path $cacheRoot -Force | Out-Null
+            $archive = Join-Path $cacheRoot ('sdk-' + [Guid]::NewGuid().ToString('N') + '.zip')
+            try {
+                Write-Host 'Fetching Microsoft .NET SDK 8.0.425 for this build; verifying SHA-512.'
+                Invoke-WebRequest -UseBasicParsing -Uri 'https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.425/dotnet-sdk-8.0.425-win-x64.zip' -OutFile $archive -TimeoutSec 180
+                $expectedHash = 'f0b6f15bf6f1a0507205c0cb102ab99e1dee875c4682c8ed94665be1d580186a06b21455e83b3a01a0ff7f4cd887b67420f2e2fe09ed985534a4cea488ae1af9'
+                if ((Get-FileHash -LiteralPath $archive -Algorithm SHA512).Hash -ne $expectedHash) { throw 'Microsoft SDK archive checksum mismatch.' }
+                Expand-Archive -LiteralPath $archive -DestinationPath $cacheRoot -Force
+            } finally { if (Test-Path -LiteralPath $archive) { Remove-Item -LiteralPath $archive -Force } }
+            $DotnetPath = $cachedSdk
+        }
+    }
+    $DotnetPath = (Resolve-Path -LiteralPath $DotnetPath).Path
     $sdkVersion = & $DotnetPath --version
     if ($LASTEXITCODE -ne 0) { throw '.NET SDK 8.0.425 is required; see global.json.' }
-    $expectedSdk = (Get-Content -LiteralPath (Join-Path $repoRoot 'global.json') -Raw | ConvertFrom-Json).sdk.version
     if ($sdkVersion -ne $expectedSdk) { throw ('Exact .NET SDK required: ' + $expectedSdk + '; found ' + $sdkVersion) }
     Write-Host $sdkVersion
     & node tools/generate-manifest.mjs

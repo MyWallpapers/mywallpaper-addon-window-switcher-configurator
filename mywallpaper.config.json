@@ -5,7 +5,6 @@
       "command": "powershell.exe",
       "args": ["-NoLogo", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "native/build.ps1"],
       "cwd": ".",
-      "inputs": ["manifest.json", "profiles", "src", "native/build.ps1", "Directory.Build.props", "global.json"],
       "outputs": ["native/out/windows-x86_64/companion.exe", "native/out/windows-x86_64"]
     }]
   }
