@@ -2,7 +2,7 @@
   "runtime": "native-v1",
   "name": "Sélecteur de fenêtres",
   "description": "Un sélecteur personnalisable : grille, liste, classique, cascade et carte du bureau, avec aperçus DWM, profils et navigation clavier.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "deviceSettingsVersion": "1",
   "settings": [
     {

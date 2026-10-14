@@ -32,6 +32,8 @@ La qualification réelle des HWND ajoute l’application à chaud et le retrait 
 
 Le SDK .NET est désormais exigé à sa version exacte. Le PathMap normalise les chemins de compilation dans les trois projets et leur version devient 0.1.0. Deux répertoires de construction distincts donnent les mêmes 468 fichiers ; ce contrôle ne remplace pas la reconstruction centrale du serveur. Pas de dépendance ni de code partagé retiré ; les notices runtime et l’entrée exacte du CLI sont conservées.
 
+Le contrôle depuis Git impose aussi des fins de ligne LF explicites et ignore le cache local `.mywallpaper/`. La version candidate finale est 0.1.1 ; le tag 0.1.0 est conservé et n’est pas déplacé. Le test de protocole lit la version du manifeste pour suivre les prochaines releases. Les métadonnées Git embarquées restent actives : la comparaison finale porte sur deux checkouts du même tag.
+
 Après revue indépendante, `Closing` gère SC_CLOSE/Alt+F4 comme une annulation de sélection et `CloseOwned` réserve la destruction au dispose. Ces deux chemins restent nécessaires : le premier garde le HWND réutilisable, le second termine son cycle de vie. Le fallback d’icône utilise `LoadIconW`, avec un seul import retenu et ses deux appelants (cartes et tray). La désactivation arrête aussi le polling, et le harness vérifie sa réactivation. Le projet a été reconsidéré sur ces seuls chemins ; aucune suppression issue d’un fan-in nul n’a été faite.
 
 Le nettoyage n’est pas déduit de l’absence d’un élément à l’écran : ses releases sont explicites et les observations sont dans les rapports de tests. Les compteurs ne démontrent pas l’absence de toute fuite .NET ou GPU ; cette portée n’est pas revendiquée.

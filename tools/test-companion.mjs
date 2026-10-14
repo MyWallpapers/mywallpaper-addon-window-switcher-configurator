@@ -1,7 +1,7 @@
 import { spawn } from 'node:child_process';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const executable = process.argv[2] || resolve(root, 'native/out/windows-x86_64/companion.exe');
 const timeout = (message, ms = 5000) => new Promise((_, reject) => { const timer = setTimeout(() => reject(new Error(message)), ms); timer.unref(); });
@@ -36,7 +36,8 @@ function session() {
   };
   return { child, send, read, exited, stderr: () => stderr };
 }
-const init = { type: 'init', v: 5, addonId: 'window-switcher-local-smoke', artifactDigest: 'sha256:' + 'a'.repeat(64), version: '0.1.0', targetArchitecture: 'windows-x86_64', scratchDirectory: root, layerSettings: {}, deviceSettings: { enabled: false } };
+const manifest = JSON.parse(await readFile(resolve(root, 'manifest.json'), 'utf8'));
+const init = { type: 'init', v: 5, addonId: 'window-switcher-local-smoke', artifactDigest: 'sha256:' + 'a'.repeat(64), version: manifest.version, targetArchitecture: 'windows-x86_64', scratchDirectory: root, layerSettings: {}, deviceSettings: { enabled: false } };
 const message = op => ({ type: 'message', v: 5, surface: 'interface', instanceId: 'fixture:interface:0', displayIndex: 0, payload: { op } });
 const results = [];
 async function ready(s) { s.send(init); let frame; do { frame = await s.read(); } while (frame.type === 'progress'); if (frame.type !== 'ready' || frame.v !== 5) throw new Error('Ready v5 missing'); }

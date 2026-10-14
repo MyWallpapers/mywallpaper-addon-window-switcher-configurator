@@ -1,6 +1,7 @@
 **/bin/
 **/obj/
 native/out/
+.mywallpaper/
 .research/
 .qualification-private/
 *.user
